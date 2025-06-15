@@ -8,7 +8,7 @@ export default function About() {
     <section className="py-16 bg-gradient-to-tl from-white to-red-500" id="about">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-start gap-12">
-          {/* Left Content Animated from Left to Right */}
+          {/* Left Content */}
           <motion.div
             className="lg:w-1/2 w-full"
             initial={{ x: -100, opacity: 0 }}
@@ -17,23 +17,25 @@ export default function About() {
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <h1 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              About the <span className="text-red-600">Motorex Expo</span> Auto Show
+              About the <span className="text-red-600">Motorex Expo 2025</span>
             </h1>
             <p className="text-white mb-4 text-lg">
-              The EV Auto Show is the Middle East's premier electric vehicle
-              exhibition, showcasing the latest innovations in sustainable
-              transportation since 2018.
+              Motorex Expo 2025 is the first and largest international automotive exhibition 
+              in Syria, held in Damascus from August 5 to August 9, 2025 (daily from 17:00 to 22:00).
+            </p>
+            <p className="text-white mb-4 text-lg">
+              This historic event brings together global automotive brands, dealers, collectors,
+              and car lovers to reignite the Syrian automotive scene with passion and innovation.
             </p>
             <p className="text-white mb-6 text-lg">
-              Our annual event brings together industry leaders, policymakers,
-              and enthusiasts to experience cutting-edge EV technology and drive
-              the future of mobility.
+              Organized by the Motorex Expo Team, this show offers a unique opportunity to discover:
             </p>
             <div className="space-y-4 mb-8">
               {[
-                "100+ Electric Vehicles on Display",
-                "Live Test Drive Experiences",
-                "Industry Expert Presentations",
+                "Passenger Vehicles & Heavy Machinery",
+                "Buses & Commercial Vehicles",
+                "Automotive Technology & Innovation",
+                "Tuning, Accessories & Aftermarket",
               ].map((text, i) => (
                 <motion.div
                   key={i}
@@ -43,9 +45,9 @@ export default function About() {
                   transition={{ duration: 0.6, delay: 0.3 + i * 0.2 }}
                   viewport={{ once: false, amount: 0.3 }}
                 >
-                  <div className="bg-blue-100 p-2 rounded-full mr-4">
+                  <div className="bg-white p-2 rounded-full mr-4">
                     <svg
-                      className="w-6 h-6 text-blue-600"
+                      className="w-6 h-6 text-red-600"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -57,6 +59,7 @@ export default function About() {
                 </motion.div>
               ))}
             </div>
+
             <motion.button
               className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-md font-medium transition duration-300"
               initial={{ opacity: 0, y: 20 }}
@@ -64,11 +67,11 @@ export default function About() {
               transition={{ duration: 0.6, delay: 1 }}
               viewport={{ once: false }}
             >
-              Get to know us
+              Contact Us: info@motorexexpo.com
             </motion.button>
           </motion.div>
 
-          {/* Right Image Grid - One Combined Animation */}
+          {/* Right Image Section */}
           <motion.div
             className="lg:w-1/2 w-full mt-10 space-y-5"
             initial={{ x: 100, opacity: 0 }}
@@ -84,7 +87,7 @@ export default function About() {
                 >
                   <img
                     src={img}
-                    alt={`EV Show ${index + 1}`}
+                    alt={`Motorex ${index + 1}`}
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -98,13 +101,12 @@ export default function About() {
                 >
                   <img
                     src={img}
-                    alt={`EV Show ${index + 1}`}
+                    alt={`Motorex ${index + 1}`}
                     className="w-full h-full object-cover"
                   />
                 </div>
               ))}
             </div>
-
           </motion.div>
         </div>
       </div>

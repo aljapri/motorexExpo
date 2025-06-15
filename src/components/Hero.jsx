@@ -7,7 +7,7 @@ export default function Hero() {
       <div className="absolute inset-0">
         <img
           src="bg.jpeg"
-          alt="EV Auto Show Background"
+          alt="Motorex Expo Background"
           className="w-full h-full object-cover"
         />
 
@@ -35,11 +35,12 @@ export default function Hero() {
           viewport={{ once: false, amount: 0.5 }}
         >
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            The Future of Mobility is Here
+            Syria’s Biggest Automotive Comeback
           </h1>
           <p className="text-xl mb-8">
-            Explore the latest electric vehicles from leading manufacturers at
-            the premier EV Auto Show.
+            Join us at <strong>Motorex Expo 2025</strong> – the first international 
+            automotive exhibition in Damascus, connecting global brands with 
+            local passion and opportunity.
           </p>
           <div className="flex flex-row gap-4">
             <button className="bg-red-600 hover:bg-red-700 text-white px-2 sm:px-6 py-2 rounded-md font-medium transition duration-300">
@@ -59,11 +60,9 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.2 }}
           viewport={{ once: false, amount: 0.5 }}
         >
-          <h1 className="text-4xl font-semibold mb-4">28 - 30 Oct, 2025</h1>
-          <h4 className="text-lg">
-            Riyadh International Convention & Exhibition Center
-          </h4>
-          <h4 className="text-lg">Saudi Arabia</h4>
+          <h1 className="text-4xl font-semibold mb-4">5 – 9 August, 2025</h1>
+          <h4 className="text-lg">Damascus International Fairgrounds</h4>
+          <h4 className="text-lg">Syria</h4>
         </motion.div>
       </div>
     </section>

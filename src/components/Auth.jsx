@@ -1,12 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-export default function Auth() {
+export default function Footer() {
   return (
-    <div className="border-t space-y-5 flex flex-row justify-around flex-wrap px-20 border-white w-full  pt-8 bg-white text-center pb-5 text-red-900">
-    <p>
-      © {new Date().getFullYear()} MOTOREX Online. All rights reserved.
-    </p>
-
-  </div>
-  )
+    <footer className="w-full border-t border-white bg-white px-8 md:px-20 py-8 text-center text-red-900">
+      <p className="text-sm">
+        © {new Date().getFullYear()} MOTOREX Online. All rights reserved.
+      </p>
+    </footer>
+  );
 }

@@ -12,30 +12,29 @@ export default function CardShow() {
         {/* Close button */}
         <button
           onClick={() => setVisible(false)}
-          className="absolute top-0 right-0 cursor-pointer  bg-white text-red-900 hover:bg-red-200  p-2 z-10"
+          className="absolute top-0 right-0 cursor-pointer bg-white text-red-900 hover:bg-red-200 p-2 z-10"
         >
           <FaTimes />
         </button>
 
         {/* Image Background with Text Overlay */}
         <div
-          className="relative bg-cover bg-center h-[300px] flex items-center justify-center text-center text-white "
+          className="relative bg-cover bg-center h-[300px] flex items-center justify-center text-center text-white"
           style={{
-            backgroundImage: `url('/card.jpeg')`, // replace with your image path
+            backgroundImage: `url('/card.jpeg')`, // استخدم صورة مناسبة لـ Motorex
           }}
         >
-          <div className="bg-black/60 p-4 rounded w-full h-full flex flex-col ">
-            <h2 className="text-lg font-semibold mb-2 mt-10">
-              Thank you for making EV Auto Show 2024 a grand success!
+          <div className="bg-black/60 p-4 rounded w-full h-full flex flex-col items-center justify-center">
+            <h2 className="text-lg font-semibold mb-2">
+              Thank you for supporting Motorex Expo!
             </h2>
-            <p className="text-sm mt-5">
-              See you in 2025!
+            <p className="text-sm mt-3 leading-relaxed">
+              We’re excited to welcome you to the<br />
+              <strong>Motorex Expo 2025</strong> in Damascus, Syria.
               <br />
-              27 - 29 October 2025
-              <br />
-              Riyadh International Convention & 
-              <br />
-              Exhibition Center, Saudi Arabia
+              <span className="block mt-2">📅 5 – 9 August 2025</span>
+              <span className="block">🕔 Daily from 5:00 PM – 10:00 PM</span>
+              <span className="block mt-1">📍 Damascus International Fairgrounds</span>
             </p>
           </div>
         </div>

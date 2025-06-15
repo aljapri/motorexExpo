@@ -3,32 +3,32 @@ import { motion, useAnimation, useInView } from "framer-motion";
 
 const speakers = [
   {
-    name: "Abdulmuain AlSoufi",
-    title: "E‑Mobility Expert",
-    org: "Al Fanar",
+    name: "Eng. Ahmad Zain",
+    title: "Automotive Engineer",
+    org: "Syrian Automotive Union",
     img: "/speakers/icon.png",
   },
   {
-    name: "Dr. Samer Aljabari",
-    title: "Executive Chief Advisor",
-    org: "NIDC‑Ministry of Industry & Mineral Resources",
+    name: "Lana Shamma",
+    title: "Regional Marketing Director",
+    org: "Renault Middle East",
     img: "/speakers/icon.png",
   },
   {
-    name: "Jonathan Spear",
-    title: "Transport Policy & Strategy Advisor",
-    org: "Atkins / CIHT Dubai Group",
+    name: "Omar Al Husseini",
+    title: "CEO",
+    org: "AutoTech Innovations",
     img: "/speakers/icon.png",
   },
   {
-    name: "Mansour Almakahlas",
-    title: "eMobility Department",
-    org: "Solutions Valley",
+    name: "Dr. Fares Hammoud",
+    title: "Mechanical Engineering Professor",
+    org: "Damascus University",
     img: "/speakers/icon.png",
   },
   {
-    name: "Pascal H. Grégoire",
-    title: "Belgium's Ambassador",
+    name: "Michel Aoun",
+    title: "Classic Cars Collector",
     org: "",
     img: "/speakers/icon.png",
   },
@@ -47,13 +47,11 @@ export default function OurSpeakers() {
     }
   }, [inView, controls]);
 
-  // Animate text from top (y: -50 to y: 0)
   const textVariants = {
     hidden: { opacity: 0, y: -50 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
   };
 
-  // Animate cards from top with stagger delay (y: -50 to y: 0)
   const cardVariants = {
     hidden: { opacity: 0, y: -50 },
     visible: (i) => ({
@@ -62,7 +60,7 @@ export default function OurSpeakers() {
       transition: {
         duration: 0.7,
         ease: "easeOut",
-        delay: i * 0.15, // stagger by index
+        delay: i * 0.15,
       },
     }),
   };
@@ -79,7 +77,7 @@ export default function OurSpeakers() {
           initial="hidden"
           animate={controls}
         >
-          Our Speakers
+          Meet Our Speakers
         </motion.h2>
 
         <motion.p
@@ -89,7 +87,7 @@ export default function OurSpeakers() {
           animate={controls}
           transition={{ delay: 0.3, duration: 0.8, ease: "easeOut" }}
         >
-          Hear from top experts shaping the future of e-mobility.
+          Industry leaders and automotive experts gather to shape Syria's future in the global automotive scene.
         </motion.p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">

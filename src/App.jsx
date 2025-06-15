@@ -1,49 +1,43 @@
-import About from "./components/About"
-import Auth from "./components/Auth"
-import BookStand from "./components/BookStand"
-import CardShow from "./components/CardShow"
-import CategorySlider from "./components/CategorySlider"
-import FeaturedBrands from "./components/FeaturedBrands"
-import Footer from "./components/Footer"
-import Header from "./components/Header"
-import Hero from "./components/Hero"
-import OurSpeakers from "./components/OurSpeakers"
-import PartnersExhibitorsMedia from "./components/SectionComingSoon"
-import Sectors from "./components/Sectors"
-import Marquees from "./components/StatesSection"
-import Status from "./components/Status"
-import Testimonials from "./components/Testimonials"
-import WhatsAppButton from "./components/WhatsAppButton"
-import WhyAttend from "./components/WhyAttend"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Layout from "./Layout";
+
+// Pages
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Visitor from "./pages/Visitor";
+import Conference from "./pages/Conference";
+import Sponsors from "./pages/Sponsors";
+import Media from "./pages/Media";
+
+// Exhibitor Subpages
+import AboutEvent from "./pages/exhibitors/AboutEvent";
+import WhyExhibit from "./pages/exhibitors/ExhibitorZone";
+import Registration from "./pages/exhibitors/Registration";
+import FloorPlan from "./pages/exhibitors/FloorPlan";
+// import ExhibitorZone from "./pages/exhibitors/FloorPlan";
 
 function App() {
-  
-
   return (
-    <>
-      <div className="min-h-screen flex flex-col overflow-hidden" >
-        <Header/>
-        <CardShow/>
-        <main className="flex-grow">
-          <Hero/>
-          {/* <FeaturedBrands/> */}
-          <Status/>
-          <Marquees/>
-          <About/>
-          <WhyAttend/>
-          <BookStand/>
-          {/* <Testimonials/> */}
-          <OurSpeakers/>
-          <Sectors/>
-          <PartnersExhibitorsMedia/>
-        </main>
-        <Footer/>
-        <Auth/>
-        <WhatsAppButton /> {/* 👈 Add the WhatsApp Button here */}
+    <Router>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="visitor" element={<Visitor />} />
+          <Route path="conference" element={<Conference />} />
+          <Route path="sponsors" element={<Sponsors />} />
+          <Route path="media" element={<Media />} />
 
-      </div>
-    </>
-  )
+          {/* Exhibitors */}
+          <Route path="exhibitors/about-event" element={<AboutEvent />} />
+          <Route path="exhibitors/why-exhibit" element={<WhyExhibit />} />
+          <Route path="exhibitors/registration" element={<Registration />} />
+          <Route path="exhibitors/floor-plan" element={<FloorPlan />} />
+          {/* <Route path="exhibitors/exhibitor-zone" element={<ExhibitorZone />} /> */}
+        </Route>
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;

@@ -8,7 +8,6 @@ import {
   FaLinkedinIn,
 } from "react-icons/fa";
 import { motion, useInView } from "framer-motion";
-import Auth from "./Auth";
 import UpAnimation from "./UpAnimation";
 import DownAnimation from "./DownAnimation";
 import { useRef } from "react";
