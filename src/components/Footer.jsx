@@ -7,16 +7,21 @@ import {
   FaFacebookF,
   FaLinkedinIn,
 } from "react-icons/fa";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import Auth from "./Auth";
+import UpAnimation from "./UpAnimation";
+import DownAnimation from "./DownAnimation";
+import { useRef } from "react";
 
 export default function Footer() {
+  const ref = useRef(null);
+  const inView = useInView(ref, { triggerOnce: true, threshold: 0 });
 
   return (
-    <footer className="bg-gradient-to-b from-red-500 to-red-900 pb-20 text-white pt-12 relative">
-      {/* ✅ Animated Clip Paths from Left to Right */}
-
-      <div className="container mx-auto px-4">
+    <footer className="bg-gradient-to-b from-red-500 to-red-900 pb-20 text-white pt-12 relative"       ref={ref}>
+      <UpAnimation inView={inView}/>
+      <DownAnimation inView={inView}/>
+      <div className="container mx-auto px-4 mt-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <motion.div
             className="max-w-2xl mb-12"
@@ -26,8 +31,13 @@ export default function Footer() {
             viewport={{ once: false, amount: 0.5 }}
           >
             {" "}
-            <img src="logo.png" alt="EV AutoShow Logo" width={100} />
-            <p>28 - 30 Oct, 2025</p>
+            <img
+              src="logo.png"
+              alt="EV AutoShow Logo"
+              width={200}
+              className="-ml-8"
+            />
+            <p className="">28 - 30 Oct, 2025</p>
             <br />
             <p>
               Riyadh International Convention & Exhibition Center, Saudi Arabia.
@@ -157,19 +167,6 @@ export default function Footer() {
             <FaYoutube size={30} color="red" />
           </a>
         </motion.div>
-        <div
-        className="absolute bottom-0 left-64 transform -translate-x-1/2 w-[200px] h-[70px] bg-white bg-opacity-10"
-        style={{
-          clipPath: "polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%)",
-        }}
-
-      />
-      <div
-        className="absolute bottom-0 left-96 transform -translate-x-1/2 w-[140px] h-[67px] bg-white bg-opacity-10"
-        style={{
-          clipPath: "polygon(35% 0, 0% 100%, 100% 100%)",
-        }}
-      />
       </div>
       {/* <Auth /> */}
     </footer>

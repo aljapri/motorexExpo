@@ -1,12 +1,26 @@
 import React, { useEffect, useRef } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 import {
-  FaCar, FaBicycle, FaMotorcycle, FaBus, FaShuttleVan,
-  FaRocket, FaMobileAlt, FaCode, FaMapMarkedAlt,
-  FaIndustry, FaBolt, FaGlobe, FaSignal,
-  FaUniversity, FaChargingStation, FaBatteryFull,
-  FaFlask, FaRobot
+  FaCar,
+  FaBicycle,
+  FaMotorcycle,
+  FaBus,
+  FaShuttleVan,
+  FaRocket,
+  FaMobileAlt,
+  FaCode,
+  FaMapMarkedAlt,
+  FaIndustry,
+  FaBolt,
+  FaGlobe,
+  FaSignal,
+  FaUniversity,
+  FaChargingStation,
+  FaBatteryFull,
+  FaFlask,
+  FaRobot,
 } from "react-icons/fa";
+import DownAnimation from "./DownAnimation";
 
 const sectors = [
   { label: "Electric Car", icon: FaCar },
@@ -23,7 +37,10 @@ const sectors = [
   { label: "Economic Zones", icon: FaGlobe },
   { label: "Telecom / Wireless Carriers", icon: FaSignal },
   { label: "Regulators and Government Agencies", icon: FaUniversity },
-  { label: "Electric Charging Stations and Equipment", icon: FaChargingStation },
+  {
+    label: "Electric Charging Stations and Equipment",
+    icon: FaChargingStation,
+  },
   { label: "Electric Vehicle Batteries Manufacturers", icon: FaBatteryFull },
   { label: "Battery Materials / Mining Companies", icon: FaFlask },
   { label: "Autonomous Vehicles / Technology", icon: FaRobot },
@@ -31,18 +48,17 @@ const sectors = [
 
 const headingVariants = {
   hidden: { opacity: 0, scale: 0.8 },
-  visible: { 
-    opacity: 1, 
-    scale: 1, 
-    transition: { duration: 0.8, ease: "easeOut" }
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 0.8, ease: "easeOut" },
   },
 };
 
 export default function Sectors() {
   const controls = useAnimation();
   const ref = useRef(null);
-  const inView = useInView(ref, { threshold: 0.3,once:false, });
-
+  const inView = useInView(ref, { threshold: 0, once: false });
   useEffect(() => {
     if (inView) {
       controls.start("visible");
@@ -50,29 +66,6 @@ export default function Sectors() {
       controls.start("hidden");
     }
   }, [inView, controls]);
-  const leftToRightVariant = {
-    hidden: {
-      x: -100,
-      opacity: 1,
-    },
-    visible: {
-      x: 0,
-      opacity: 0,
-      transition: { duration: 3, ease: "easeOut" },
-    },
-  };
-
-  const leftToRightVariantDelayed = {
-    hidden: {
-      x: -100,
-      opacity: 1,
-    },
-    visible: {
-      x: 0,
-      opacity: 0,
-      transition: { duration: 4, delay: 0.3, ease: "easeOut" },
-    },
-  };
 
   return (
     <section className="relative py-20 text-white overflow-hidden">
@@ -110,31 +103,16 @@ export default function Sectors() {
                 }}
               >
                 <Icon size={28} className="mb-2" />
-                <span className="leading-snug text-center px-2">{sector.label}</span>
+                <span className="leading-snug text-center px-2">
+                  {sector.label}
+                </span>
               </div>
             );
           })}
         </div>
       </div>
 
-      <motion.div
-        className="absolute bottom-0 left-64 transform -translate-x-1/2 w-[200px] h-[70px] bg-white bg-opacity-10"
-        style={{
-          clipPath: "polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%)",
-        }}
-        variants={leftToRightVariant}
-        initial="hidden"
-        animate={controls}
-      />
-      <motion.div
-        className="absolute bottom-0 left-96 transform -translate-x-1/2 w-[140px] h-[67px] bg-white bg-opacity-10"
-        style={{
-          clipPath: "polygon(35% 0, 0% 100%, 100% 100%)",
-        }}
-        variants={leftToRightVariantDelayed}
-        initial="hidden"
-        animate={controls}
-      />
+      <DownAnimation inView={inView} />
     </section>
   );
 }

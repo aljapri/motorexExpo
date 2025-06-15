@@ -10,7 +10,18 @@ export default function Hero() {
           alt="EV Auto Show Background"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black opacity-50"></div>
+
+        {/* Red gradient from bottom right corner */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background:
+              "linear-gradient(to top left, rgba(250,38,38,0.7) 0%, transparent 20%)",
+          }}
+        />
+
+        {/* Black overlay */}
+        <div className="absolute inset-0 bg-black opacity-50" />
       </div>
 
       {/* Animated Content */}
@@ -42,13 +53,13 @@ export default function Hero() {
 
         {/* Animated Bottom to Top Date/Location */}
         <motion.div
-          className="border-l-4 border-red-500 pl-4 py-2 mt-8"
+          className="border-l-4 border-red-500 pl-4 py-2 mt-8 absolute bottom-20"
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.7, delay: 0.2 }}
           viewport={{ once: false, amount: 0.5 }}
         >
-          <h3 className="text-xl font-semibold">28 - 30 Oct, 2025</h3>
+          <h1 className="text-4xl font-semibold mb-4">28 - 30 Oct, 2025</h1>
           <h4 className="text-lg">
             Riyadh International Convention & Exhibition Center
           </h4>

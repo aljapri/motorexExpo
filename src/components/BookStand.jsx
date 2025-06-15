@@ -1,9 +1,14 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import UpAnimation from "./UpAnimation";
+import DownAnimation from "./DownAnimation";
 
 export default function BookStand() {
+  const ref = useRef(null);
+  const inView = useInView(ref, { triggerOnce: true, threshold: 0.1 });
+
   return (
-    <section className="relative py-20 text-white overflow-hidden">
+    <section className="relative  text-white ">
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center z-0"
@@ -11,12 +16,19 @@ export default function BookStand() {
       ></div>
 
       {/* Red Overlay */}
-      <div className="absolute inset-0 bg-[#a01313ab] z-0"></div>
+
+      <div className="absolute inset-0 bg-[#0000007a] z-0"></div>
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col p-10 justify-center items-center space-y-10">
+      <div
+        className="relative z-10 flex flex-col p-10 justify-center items-center  "
+        ref={ref} // ✅ Moved ref here
+      >
+        <UpAnimation inView={inView} />
+        <DownAnimation inView={inView} />
+        
         <motion.h1
-          className="text-4xl md:text-5xl font-extrabold leading-tight text-center"
+          className="text-4xl md:text-5xl font-extrabold leading-tight text-center mt-10"
           initial={{ opacity: 0, y: -50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, amount: 0.3 }}
@@ -37,7 +49,8 @@ export default function BookStand() {
           </h3>
 
           <p className="text-lg md:text-xl">
-            Taking place in Riyadh from <strong>28th to 30th October 2025</strong>
+            Taking place in Riyadh from{" "}
+            <strong>28th to 30th October 2025</strong>
           </p>
 
           <p className="text-base md:text-lg font-bold">
@@ -47,7 +60,7 @@ export default function BookStand() {
             visibility for your brand in front of the global EV market.
           </p>
 
-          <button className="mt-6 px-8 py-3 bg-[#ff1100c7] text-white font-semibold rounded-full hover:bg-red-400 transition duration-300">
+          <button className="mt-6 mb-12 px-8 py-3 bg-[#ff1100c7] text-white font-semibold rounded-full hover:bg-red-400 transition duration-300">
             Reserve Your Stand
           </button>
         </motion.div>

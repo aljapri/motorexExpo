@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
+import { Autoplay } from 'swiper/modules';
 
 export default function WhyAttend() {
   const reasons = [
@@ -95,6 +96,11 @@ export default function WhyAttend() {
         <Swiper
           spaceBetween={30}
           loop={true}
+          modules={[Autoplay]}
+          autoplay={{
+            delay:2000,
+            disableOnInteraction:false
+          }}
           slidesPerView={1}
           breakpoints={{
             640: { slidesPerView: 1 },
@@ -105,7 +111,7 @@ export default function WhyAttend() {
           {reasons.map((reason, index) => (
             <SwiperSlide key={index}>
               <motion.div
-                className="bg-[#c21e1e] p-8 shadow-md hover:shadow-lg py-14 transition-shadow duration-300 flex flex-col justify-center items-center text-center"
+                className="bg-[#c21e1e]  shadow-md hover:shadow-lg py-25 px-10 transition-shadow duration-300 flex flex-col justify-center items-center text-center"
                 style={{
                   clipPath:
                     "polygon(20% 0, 100% 10%, 100% 35%, 100% 86%, 82% 100%, 50% 100%, 24% 100%, 0 100%, 0 28%, 0 10%)",
@@ -115,7 +121,10 @@ export default function WhyAttend() {
                 viewport={{ once: false, amount: 0.3 }}
                 transition={{ duration: 1.8, ease: "easeOut" }}
               >
-                <img src={reason.image} width={300} className="mb-4" />
+                <img src={reason.image} width={300} className="mb-4 h-80 rounded-bl-4xl rounded-tr-4xl "  style={{
+                  clipPath:
+                    "polygon(20% 0, 100% 10%, 100% 35%, 100% 86%, 82% 100%, 50% 100%, 24% 100%, 0 100%, 0 28%, 0 10%)",
+                }}/>
                 <h3 className="text-xl font-bold text-white mb-2">{reason.title}</h3>
                 <p className="text-white">{reason.description}</p>
               </motion.div>

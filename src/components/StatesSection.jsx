@@ -2,6 +2,7 @@ import Marquee from "react-fast-marquee";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
+import DownAnimation from "./DownAnimation";
 
 const stats = [
   { label: "Electric Motorcycle" },
@@ -13,7 +14,7 @@ const stats = [
 
 export default function Marquees() {
   const controls = useAnimation();
-  const [ref, inView] = useInView({ threshold: 0.3, triggerOnce: false });
+  const [ref, inView] = useInView({ threshold: 0.1, triggerOnce: false });
 
   useEffect(() => {
     if (inView) {
@@ -23,29 +24,7 @@ export default function Marquees() {
     }
   }, [inView, controls]);
 
-  const leftToRightVariant = {
-    hidden: {
-      x: -100,
-      opacity: 0,
-    },
-    visible: {
-      x: 0,
-      opacity: 1,
-      transition: { duration: 1, ease: "easeOut" },
-    },
-  };
 
-  const leftToRightVariantDelayed = {
-    hidden: {
-      x: -100,
-      opacity: 0,
-    },
-    visible: {
-      x: 0,
-      opacity: 1,
-      transition: { duration: 1, delay: 0.3, ease: "easeOut" },
-    },
-  };
 
   return (
     <section
@@ -54,7 +33,7 @@ export default function Marquees() {
     >
       {/* Stripe 1 - Tilted Left */}
       <div className="absolute top-20 left-0 w-full">
-        <div className="w-[200%] -ml-[50%] transform rotate-[-5deg] bg-gray-400">
+        <div className="w-[200%] -ml-[50%] transform rotate-[-5deg] text-red-900 bg-white">
           <Marquee speed={30} gradient={false} direction="left" loop={0}>
             {Array(10)
               .fill(stats)
@@ -64,7 +43,7 @@ export default function Marquees() {
                   key={index}
                   className="text-center min-w-[180px] px-6 py-3"
                 >
-                  <div className="text-3xl text-white">{item.label}</div>
+                  <div className="text-3xl text-red-900">{item.label}</div>
                 </div>
               ))}
           </Marquee>
@@ -91,24 +70,7 @@ export default function Marquees() {
       </div>
 
       {/* ✅ Animated Clip Paths from Left to Right */}
-      <motion.div
-        className="absolute bottom-0 left-64 transform -translate-x-1/2 w-[200px] h-[70px] bg-white bg-opacity-10"
-        style={{
-          clipPath: "polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%)",
-        }}
-        variants={leftToRightVariant}
-        initial="hidden"
-        animate={controls}
-      />
-      <motion.div
-        className="absolute bottom-0 left-96 transform -translate-x-1/2 w-[140px] h-[67px] bg-white bg-opacity-10"
-        style={{
-          clipPath: "polygon(35% 0, 0% 100%, 100% 100%)",
-        }}
-        variants={leftToRightVariantDelayed}
-        initial="hidden"
-        animate={controls}
-      />
+        <DownAnimation inView={inView} />
     </section>
   );
 }
