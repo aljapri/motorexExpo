@@ -18,10 +18,10 @@ export default function AboutEvent() {
     
           <UpAnimation inView={inView} />
           
-          <AboutEventCard />
-          <AboutEventCard reverse />
-          <AboutEventCard />
-          <AboutEventCard reverse />
+          <AnimatedSection />
+          <AnimatedSection reverse />
+          <AnimatedSection />
+          <AnimatedSection reverse />
         </section>
       </div>
   )

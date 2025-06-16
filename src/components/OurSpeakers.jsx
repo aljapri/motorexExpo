@@ -117,14 +117,14 @@ export default function OurSpeakers() {
           ))}
         </div>
 
-        <div className="mt-12 text-center">
+        {/* <div className="mt-12 text-center">
           <a
             href="/speaker-list"
             className="inline-block px-8 py-3 bg-white text-red-700 border-2 border-white rounded-full font-semibold hover:bg-red-700 hover:text-white transition"
           >
             View All Speakers
           </a>
-        </div>
+        </div> */}
       </div>
     </section>
   );

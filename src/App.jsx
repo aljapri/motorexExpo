@@ -11,7 +11,7 @@ import Media from "./pages/Media";
 
 // Exhibitor Subpages
 import AboutEvent from "./pages/exhibitors/AboutEvent";
-import WhyExhibit from "./pages/exhibitors/ExhibitorZone";
+import WhyExhibit from "./pages/exhibitors/WhyExhibit";
 import Registration from "./pages/exhibitors/Registration";
 import FloorPlan from "./pages/exhibitors/FloorPlan";
 // import ExhibitorZone from "./pages/exhibitors/FloorPlan";

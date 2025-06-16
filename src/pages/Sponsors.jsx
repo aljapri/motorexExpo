@@ -152,7 +152,7 @@ const Sponsors = () => {
           HOW
         </h1>
         <motion.p
-          className="text-white font-bold text-2xl"
+          className="text-white font-bold text-2xl text-center flex flex-row justify-center items-center"
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.3 }}

@@ -13,7 +13,7 @@ export default function Conference() {
     <div className="mb-20">
     <UpPages title="About The Conference " />
     
-    <section className="bg-white relative" ref={ref}>
+    <section className="bg-white relative mb-20" ref={ref}>
 
       <UpAnimation inView={inView} />
       

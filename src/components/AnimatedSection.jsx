@@ -50,13 +50,13 @@ export default function AnimatedSection({ reverse = false }) {
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           className="text-gray-600 text-sm"
         >
-          The fourth edition of the EV Auto Show, scheduled for October 27th to
-          29th, 2025, at the Riyadh International Convention and Exhibition
-          Centre, stands as a premier event leading the electric vehicle
-          revolution in Saudi Arabia. As the Middle East's foremost exhibition
-          dedicated to electric mobility and cutting-edge technology, this event
-          drives innovation, fosters strategic partnerships, and shapes the
-          future of sustainable transportation.
+          The fourth edition of Motrex Expo, scheduled for 5th to 9th August,
+          2025, at the Damascus International Fairgrounds in Syria, stands as a
+          premier event leading the electric vehicle revolution in the region.
+          As the Middle East's foremost exhibition dedicated to electric
+          mobility and advanced technologies, this event drives innovation,
+          fosters strategic partnerships, and shapes the future of sustainable
+          transportation.
         </motion.p>
       </div>
     </div>

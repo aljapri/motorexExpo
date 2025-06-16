@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import UpPages from "../components/UpPages";
-import { useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";  // <-- Add motion here
 import UpAnimation from "../components/UpAnimation";
 
 export default function Media() {
@@ -73,22 +73,40 @@ export default function Media() {
       link: "#",
     },
   ];
-
+  const cardVariants = {
+    hidden: { opacity: 0, y: 40 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
   return (
     <div>
       <UpPages title="BLOG" />
 
-      <div className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8 relative " ref={ref}>
+      <div
+        className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8 relative "
+        ref={ref}
+      >
         <UpAnimation inView={inView} />
 
         <div className="max-w-7xl mx-auto">
-          <div className=" flex flex-row flex-wrap gap-8 justify-center">
+          <div className="flex flex-row flex-wrap gap-8 justify-center">
             {newsItems.map((item, index) => (
-              <div
+              <motion.div
                 key={index}
                 className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 w-[300px]"
+                variants={cardVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.1 }}
               >
-                <img src="bg.jpeg" className="w-full h-[200px]" />
+                <img
+                  src="bg.jpeg"
+                  alt="news image"
+                  className="w-full h-[200px] object-cover"
+                />
                 <div className="p-6">
                   <h3 className="text-md font-bold text-gray-800 mb-2">
                     {item.title}
@@ -116,7 +134,7 @@ export default function Media() {
                     </svg>
                   </a>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
