@@ -173,6 +173,14 @@
   "sponsorPartners": "شركاء الرعاية",
   "exhibitorsList": "قائمة العارضين",
   "mediaPartner": "شريك إعلامي"
+},
+"sponsors":{
+  "titleSonsor": "الراعي الرئيسي",
+  "strategic": "استراتيجي",
+  "diamond": "ماسي",
+  "platinum": "بلاتيني",
+  "gold": "ذهبي",
+  "selver": "فضي"
 }
 
 }
