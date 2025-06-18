@@ -116,40 +116,43 @@
     "button": "Reserve Your Stand"
   },
   "sectorsTitle": "Sectors",
-  "sectors": [
-    { "label": "Electric Car", "icon": "FaCar" },
-    { "label": "Electric Scooter", "icon": "FaBicycle" },
-    { "label": "Electric Motorcycle", "icon": "FaMotorcycle" },
-    { "label": "Electric Bus", "icon": "FaBus" },
-    { "label": "Electric Van", "icon": "FaShuttleVan" },
-    { "label": "UAM / eVTOL", "icon": "FaRocket" },
-    { "label": "E-mobility Apps", "icon": "FaMobileAlt" },
-    { "label": "Software Providers", "icon": "FaCode" },
-    { "label": "Mobility Service Providers", "icon": "FaMapMarkedAlt" },
-    { "label": "Industries & Logistics", "icon": "FaIndustry" },
-    { "label": "Energy & Infrastructure", "icon": "FaBolt" },
-    { "label": "Economic Zones", "icon": "FaGlobe" },
-    { "label": "Telecom / Wireless Carriers", "icon": "FaSignal" },
-    { "label": "Regulators and Government Agencies", "icon": "FaUniversity" },
-    { "label": "Electric Charging Stations and Equipment", "icon": "FaChargingStation" },
-    { "label": "Electric Vehicle Batteries Manufacturers", "icon": "FaBatteryFull" },
-    { "label": "Battery Materials / Mining Companies", "icon": "FaFlask" },
-    { "label": "Autonomous Vehicles / Technology", "icon": "FaRobot" }
-  ],
+"sectors": [
+  { "label": "Passenger Cars & SUVs", "icon": "FaCarSide" },
+  { "label": "Electric Vehicles (EVs)", "icon": "FaBolt" },
+  { "label": "Buses & Commercial Vehicles", "icon": "FaBusAlt" },
+  { "label": "Heavy Machinery & Construction Vehicles", "icon": "FaTruckMonster" },
+  { "label": "Spare Parts & Maintenance Equipment", "icon": "FaTools" },
+  { "label": "Electric Charging Stations and Equipment", "icon": "FaChargingStation" },
+  { "label": "Car and Vehicles Tires", "icon": "FaCircle" },
+  { "label": "Car Oil & Fluids", "icon": "FaOilCan" },
+  { "label": "Distributors, Dealers & Importers", "icon": "FaStore" },
+  { "label": "Motorcycles", "icon": "FaMotorcycle" },
+  { "label": "Tuning cars", "icon": "FaCogs" },
+  { "label": "Mobility apps", "icon": "FaMobileAlt" },
+  { "label": "Bank Services & Financial", "icon": "FaUniversity" },
+  { "label": "Auto Shipping & Logistics", "icon": "FaTruck" },
+  { "label": "Autonomous Vehicles / Technology", "icon": "FaRobot" }
+],
 "marquee": {
-  "electricMotorcycle": "Electric Motorcycle",
-  "visitors": "Visitors",
-  "speakers": "Speakers",
-  "sessions": "Sessions",
-  "countries": "Countries"
-},
+    "cars": "Cars",
+    "bus": "Bus",
+    "heavyVehicles": "Heavy Vehicles",
+    "oilsFluids": "Oils & Fluids",
+    "spareParts": "Spare Parts",
+    "electricCars": "Electric Cars"
+  },
+  "marquee2": {
+    "dealers": "Dealers",
+    "finance": "Finance",
+    "shipping": "Auto Shipping & Logistics"
+  },
 "footer": {
   "expoDates": "5 - 9 August, 2025",
   "expoLocation": "Damascus, Syria — 17:00 to 22:00 daily",
   "contact": "Contact",
   "contactValue": "info@motorexexpo.com",
   "organizer": "Organizer",
-  "organizerValue": "Motorex Expo Team",
+  "organizerValue": "Dr. Mohamad Ourfahli Org",
   "exhibiting": "Exhibiting / Sponsorship",
   "exhibitingValue": "info@motorexexpo.com",
   "registerVisit": "Register to Visit",
@@ -169,6 +172,14 @@
   "sponsorPartners": "Sponsor Partners",
   "exhibitorsList": "Exhibitors List",
   "mediaPartner": "Media Partner"
+},
+"sponsors":{
+  "titleSonsor":"Title Sponsor",
+  "strategic":"Strategic",
+  "diamond":"Diamond",
+  "platinum":"Platinum",
+  "gold":"Gold",
+  "selver":"Selver"
 }
 
 }

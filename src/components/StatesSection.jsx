@@ -7,13 +7,19 @@ import { useTranslation } from "react-i18next";  // استيراد i18n
 
 // مفاتيح الترجمة بدلاً من النصوص الثابتة
 const stats = [
-  { labelKey: "marquee.electricMotorcycle" },
-  { labelKey: "marquee.visitors" },
-  { labelKey: "marquee.speakers" },
-  { labelKey: "marquee.sessions" },
-  { labelKey: "marquee.countries" },
+  { labelKey: "marquee.cars" },
+  { labelKey: "marquee.bus" },
+  { labelKey: "marquee.heavyVehicles" },
+  { labelKey: "marquee.oilsFluids" },
+  { labelKey: "marquee.spareParts" },
+  { labelKey: "marquee.electricCars" },
 ];
 
+const stats2 = [
+  { labelKey: "marquee2.dealers" },
+  { labelKey: "marquee2.finance" },
+  { labelKey: "marquee2.shipping" },
+];
 export default function Marquees() {
   const { t } = useTranslation(); // استخدم هوك الترجمة
   const controls = useAnimation();
@@ -55,7 +61,7 @@ export default function Marquees() {
         <div className="w-[200%] -ml-[50%] transform rotate-[5deg] bg-red-500">
           <Marquee speed={50} gradient={false} direction="right" loop={0}>
             {Array(10)
-              .fill(stats)
+              .fill(stats2)
               .flat()
               .map((item, index) => (
                 <div key={index} className="text-center min-w-[180px] px-6 py-3">

@@ -1,25 +1,24 @@
 import React, { useEffect, useRef } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 import {
-  FaCar,
-  FaBicycle,
-  FaMotorcycle,
-  FaBus,
-  FaShuttleVan,
-  FaRocket,
-  FaMobileAlt,
-  FaCode,
-  FaMapMarkedAlt,
-  FaIndustry,
+  FaCarSide,
   FaBolt,
-  FaGlobe,
-  FaSignal,
-  FaUniversity,
+  FaBusAlt,
+  FaTruckMonster,
+  FaTools,
   FaChargingStation,
-  FaBatteryFull,
-  FaFlask,
+  FaCircle,
+  FaOilCan,
+  FaStore,
+  FaMotorcycle,
+  FaCogs,
+  FaMobileAlt,
+  FaUniversity,
+  FaTruck,
   FaRobot,
+  FaCar
 } from "react-icons/fa";
+
 import DownAnimation from "./DownAnimation";
 import { useTranslation } from "react-i18next";
 
@@ -102,23 +101,20 @@ export default function Sectors() {
 // Helper function to get icon component from string
 function getIconComponent(iconName) {
   const icons = {
-    FaCar,
-    FaBicycle,
-    FaMotorcycle,
-    FaBus,
-    FaShuttleVan,
-    FaRocket,
-    FaMobileAlt,
-    FaCode,
-    FaMapMarkedAlt,
-    FaIndustry,
+    FaCarSide,
     FaBolt,
-    FaGlobe,
-    FaSignal,
-    FaUniversity,
+    FaBusAlt,
+    FaTruckMonster,
+    FaTools,
     FaChargingStation,
-    FaBatteryFull,
-    FaFlask,
+    FaCircle,
+    FaOilCan,
+    FaStore,
+    FaMotorcycle,
+    FaCogs,
+    FaMobileAlt,
+    FaUniversity,
+    FaTruck,
     FaRobot
   };
   return icons[iconName] || FaCar;

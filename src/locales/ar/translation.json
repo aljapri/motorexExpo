@@ -116,40 +116,44 @@
     "button": "احجز منصتك"
   },
   "sectorsTitle": "القطاعات",
-  "sectors": [
-    { "label": "سيارة كهربائية", "icon": "FaCar" },
-    { "label": "سكوتر كهربائي", "icon": "FaBicycle" },
-    { "label": "دراجة نارية كهربائية", "icon": "FaMotorcycle" },
-    { "label": "حافلة كهربائية", "icon": "FaBus" },
-    { "label": "فان كهربائي", "icon": "FaShuttleVan" },
-    { "label": "المركبات الجوية الحضرية / eVTOL", "icon": "FaRocket" },
-    { "label": "تطبيقات التنقل الكهربائي", "icon": "FaMobileAlt" },
-    { "label": "مزودو البرمجيات", "icon": "FaCode" },
-    { "label": "مقدمو خدمات التنقل", "icon": "FaMapMarkedAlt" },
-    { "label": "الصناعات والخدمات اللوجستية", "icon": "FaIndustry" },
-    { "label": "الطاقة والبنية التحتية", "icon": "FaBolt" },
-    { "label": "المناطق الاقتصادية", "icon": "FaGlobe" },
-    { "label": "الاتصالات / مشغلو الشبكات اللاسلكية", "icon": "FaSignal" },
-    { "label": "الهيئات التنظيمية والجهات الحكومية", "icon": "FaUniversity" },
-    { "label": "محطات وشواحن السيارات الكهربائية", "icon": "FaChargingStation" },
-    { "label": "مصنعو بطاريات المركبات الكهربائية", "icon": "FaBatteryFull" },
-    { "label": "مواد البطاريات / شركات التعدين", "icon": "FaFlask" },
-    { "label": "المركبات الذاتية القيادة / التكنولوجيا", "icon": "FaRobot" }
-  ],
-"marquee": {
-  "electricMotorcycle": "الدراجة الكهربائية",
-  "visitors": "الزوار",
-  "speakers": "المتحدثون",
-  "sessions": "الجلسات",
-  "countries": "الدول"
-},
+"sectors": [
+  { "label": "سيارات الركاب والسيارات الرياضية متعددة الاستخدامات", "icon": "FaCarSide" },
+  { "label": "المركبات الكهربائية (EVs)", "icon": "FaBolt" },
+  { "label": "الحافلات والمركبات التجارية", "icon": "FaBusAlt" },
+  { "label": "الآليات الثقيلة ومركبات البناء", "icon": "FaTruckMonster" },
+  { "label": "قطع الغيار ومعدات الصيانة", "icon": "FaTools" },
+  { "label": "محطات ومعدات شحن السيارات الكهربائية", "icon": "FaChargingStation" },
+  { "label": "إطارات السيارات والمركبات", "icon": "FaCircle" },
+  { "label": "زيوت وسوائل السيارات", "icon": "FaOilCan" },
+  { "label": "الموزعين والوكلاء والمستوردين", "icon": "FaStore" },
+  { "label": "الدراجات النارية", "icon": "FaMotorcycle" },
+  { "label": "تعديل السيارات", "icon": "FaCogs" },
+  { "label": "تطبيقات التنقل", "icon": "FaMobileAlt" },
+  { "label": "الخدمات المصرفية والمالية", "icon": "FaUniversity" },
+  { "label": "شحن السيارات والخدمات اللوجستية", "icon": "FaTruck" },
+  { "label": "المركبات الذاتية القيادة / التكنولوجيا", "icon": "FaRobot" }
+]
+,
+  "marquee": {
+    "cars": "السيارات",
+    "bus": "الحافلات",
+    "heavyVehicles": "المركبات الثقيلة",
+    "oilsFluids": "الزيوت والسوائل",
+    "spareParts": "قطع الغيار",
+    "electricCars": "السيارات الكهربائية"
+  },
+  "marquee2": {
+    "dealers": "الوكلاء",
+    "finance": "التمويل",
+    "shipping": "الشحن والخدمات اللوجستية للسيارات"
+  },
 "footer": {
   "expoDates": "٥ - ٩ آب ٢٠٢٥",
   "expoLocation": "دمشق، سوريا — يوميًا من الساعة 17:00 إلى 22:00",
   "contact": "الاتصال",
   "contactValue": "info@motorexexpo.com",
   "organizer": "المنظم",
-  "organizerValue": "فريق معرض موتوريكس",
+  "organizerValue": "مؤسسة د.محمد بن مروان اورفه لي",
   "exhibiting": "العرض / الرعاية",
   "exhibitingValue": "info@motorexexpo.com",
   "registerVisit": "سجل زيارتك",

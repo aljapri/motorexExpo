@@ -5,8 +5,8 @@ export const EXPO_INFO = {
 };
 
 export const CONTACT_INFO = [
-  { labelKey: "footer.contact", valueKey: "footer.contactValue" },
   { labelKey: "footer.organizer", valueKey: "footer.organizerValue" },
+  { labelKey: "footer.contact", valueKey: "footer.contactValue" },
   { labelKey: "footer.exhibiting", valueKey: "footer.exhibitingValue" },
 ];
 

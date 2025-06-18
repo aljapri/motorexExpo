@@ -8,6 +8,9 @@ import OurSpeakers from "../components/OurSpeakers";
 import Sectors from "../components/Sectors";
 import PartnersExhibitorsMedia from "../components/SectionComingSoon";
 import CardShow from "../components/CardShow";
+import MediaPartner from "../components/MediaPartner";
+import ExhibitorList from "../components/ExhibitorsList";
+import SponsorPartners from "../components/SponsorPartners";
 
 export default function Home() {
   return (
@@ -21,7 +24,10 @@ export default function Home() {
       <BookStand />
       {/* <OurSpeakers /> */}
       <Sectors />
-      <PartnersExhibitorsMedia />
+      {/* <PartnersExhibitorsMedia /> */}
+      <SponsorPartners/>
+      <ExhibitorList/>
+      <MediaPartner/>
     </>
   );
 }
