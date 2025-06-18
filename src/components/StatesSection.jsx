@@ -3,16 +3,19 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 import DownAnimation from "./DownAnimation";
+import { useTranslation } from "react-i18next";  // استيراد i18n
 
+// مفاتيح الترجمة بدلاً من النصوص الثابتة
 const stats = [
-  { label: "Electric Motorcycle" },
-  { label: "Visitors" },
-  { label: "Speakers" },
-  { label: "Sessions" },
-  { label: "Countries" },
+  { labelKey: "marquee.electricMotorcycle" },
+  { labelKey: "marquee.visitors" },
+  { labelKey: "marquee.speakers" },
+  { labelKey: "marquee.sessions" },
+  { labelKey: "marquee.countries" },
 ];
 
 export default function Marquees() {
+  const { t } = useTranslation(); // استخدم هوك الترجمة
   const controls = useAnimation();
   const [ref, inView] = useInView({ threshold: 0.1, triggerOnce: false });
 
@@ -24,12 +27,11 @@ export default function Marquees() {
     }
   }, [inView, controls]);
 
-
-
   return (
     <section
       className="py-16 relative h-[300px] overflow-hidden bg-[#a01313ea]"
       ref={ref}
+      dir="ltr"
     >
       {/* Stripe 1 - Tilted Left */}
       <div className="absolute top-20 left-0 w-full">
@@ -39,11 +41,9 @@ export default function Marquees() {
               .fill(stats)
               .flat()
               .map((item, index) => (
-                <div
-                  key={index}
-                  className="text-center min-w-[180px] px-6 py-3"
-                >
-                  <div className="text-3xl text-red-900">{item.label}</div>
+                <div key={index} className="text-center min-w-[180px] px-6 py-3">
+                  {/* هنا نترجم المفتاح */}
+                  <div className="text-3xl text-red-900">{t(item.labelKey)}</div>
                 </div>
               ))}
           </Marquee>
@@ -58,19 +58,16 @@ export default function Marquees() {
               .fill(stats)
               .flat()
               .map((item, index) => (
-                <div
-                  key={index}
-                  className="text-center min-w-[180px] px-6 py-3"
-                >
-                  <div className="text-3xl text-white">{item.label}</div>
+                <div key={index} className="text-center min-w-[180px] px-6 py-3">
+                  <div className="text-3xl text-white">{t(item.labelKey)}</div>
                 </div>
               ))}
           </Marquee>
         </div>
       </div>
 
-      {/* ✅ Animated Clip Paths from Left to Right */}
-        <DownAnimation inView={inView} />
+      {/* Animated Clip Paths from Left to Right */}
+      <DownAnimation inView={inView} />
     </section>
   );
 }

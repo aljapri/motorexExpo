@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useRef } from "react";
 import UpPages from "../../components/UpPages";
+import UpAnimation from "../../components/UpAnimation";
+import { useInView } from "framer-motion";
 
 export default function Registration() {
+  const ref = useRef(null);
+  const inView = useInView(ref, { triggerOnce: true, threshold: 0 });
+
   return (
     <div>
       <UpPages title="Exhibit 2025" />
-      <section className="bg-white relative">
+      <section className="bg-white relative" ref={ref}>
+        <UpAnimation inView={inView}/>
         <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
           <div className="w-full max-w-4xl bg-white rounded-2xl shadow-md p-8">
             <form className="grid grid-cols-1 md:grid-cols-2 gap-6">

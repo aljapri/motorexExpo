@@ -1,0 +1,174 @@
+{
+  "card": {
+    "thank_you": "Thank you for supporting Motorex Expo!",
+    "welcome": "We're excited to welcome you to the",
+    "expo_title": "Motorex Expo 2025",
+    "location": "in Damascus, Syria.",
+    "date": "📅 5 – 9 August 2025",
+    "time": "🕔 Daily from 5:00 PM – 10:00 PM",
+    "venue": "📍 Damascus International Fairgrounds"
+  },
+  "menu": {
+    "home": "Home",
+    "about": "About",
+    "exhibitors": {
+      "title": "Exhibitors",
+      "about_event": "About the Event",
+      "why_exhibit": "Why Exhibit",
+      "registration": "Exhibitor Registration",
+      "floor_plan": "Floor Plan"
+    },
+    "visitor": {
+      "title": "Visitor",
+      "why_visit": "Why Visit"
+    },
+    "conference": "Conference",
+    "sponsors": "Sponsors/Partners",
+    "media": "Media"
+  },
+  "buttons": {
+    "register_visit": "REGISTER TO VISIT",
+    "enquire_exhibit": "Enquire to Exhibit"
+  },
+  "hero": {
+    "alt_bg": "Motorex Expo Background",
+    "title": "Syria's Biggest Automotive Comeback",
+    "description_part1": "Join us at",
+    "expo_title": "Motorex Expo 2025",
+    "description_part2": "– the first international automotive exhibition in Damascus, connecting global brands with local passion and opportunity.",
+    "date": "5 – 9 August, 2025",
+    "venue": "Damascus International Fairgrounds",
+    "location": "Syria"
+  },
+  "stats": {
+    "timeLeftUntil": "Time Left Until {{date}}",
+    "units": {
+      "days": "Days",
+      "hours": "Hours",
+      "minutes": "Minutes",
+      "seconds": "Seconds"
+    },
+    "title": "MOTOREX SHOW 2025 IN NUMBERS",
+    "labels": {
+      "ATTENDEES": "Attendees",
+      "CROSS SQM": "Cross Sqm",
+      "EXHIBITING COMPANIES": "Exhibiting Companies",
+      "EXHIBITING COUNTRIES": "Exhibiting Countries",
+      "CONFERENCE SPEAKERS": "Conference Speakers",
+      "CONFERENCE DELEGATES": "Conference Delegates"
+    }
+  },
+
+  "about": {
+    "title": {
+      "prefix": "About the",
+      "highlight": "Motorex Expo 2025"
+    },
+    "description": {
+      "1": "Motorex Expo 2025 is the first and largest international automotive exhibition in Syria, held in Damascus from August 5 to August 9, 2025 (daily from 17:00 to 22:00).",
+      "2": "This historic event brings together global automotive brands, dealers, collectors, and car lovers to reignite the Syrian automotive scene with passion and innovation.",
+      "3": "Organized by the Motorex Expo Team, this show offers a unique opportunity to discover:"
+    },
+    "points": {
+      "passengerVehicles": "Passenger Vehicles & Heavy Machinery",
+      "busesCommercialVehicles": "Buses & Commercial Vehicles",
+      "technologyInnovation": "Automotive Technology & Innovation",
+      "tuningAccessories": "Tuning, Accessories & Aftermarket"
+    },
+    "contact": "Contact Us",
+    "imageAlt": "Motorex Image"
+  },
+  "whyAttend": {
+    "title": "Why Attend",
+    "subtitle": "Join the premier automotive exhibition in the Middle East and be part of the mobility revolution",
+    "reasons": [
+      {
+        "title": "Explore Vehicles",
+        "description": "Discover the latest vehicles from leading manufacturers"
+      },
+      {
+        "title": "Technology Solutions",
+        "description": "Learn about cutting-edge automotive technologies"
+      },
+      {
+        "title": "Network",
+        "description": "Connect with industry professionals and automotive enthusiasts"
+      },
+      {
+        "title": "Expert Talks",
+        "description": "Attend insightful sessions by industry leaders"
+      },
+      {
+        "title": "Business Opportunities",
+        "description": "Explore partnerships and investment opportunities"
+      },
+      {
+        "title": "Innovation",
+        "description": "Experience groundbreaking automotive technologies first-hand"
+      }
+    ]
+  },
+  "bookStand": {
+    "title": "BOOK YOUR STAND NOW",
+    "expoTitle": "Motorex Expo 2025 – Damascus",
+    "dateInfo": "Join us in Damascus from <strong>5th to 9th August 2025</strong>, from 5:00 PM to 10:00 PM daily.",
+    "description": "Motorex Expo 2025 is Syria’s largest and first international automotive exhibition in years — offering a powerful platform for automotive innovation, business networking, and cultural celebration. Reserve your stand and put your brand at the center of this historic event.",
+    "button": "Reserve Your Stand"
+  },
+  "sectorsTitle": "Sectors",
+  "sectors": [
+    { "label": "Electric Car", "icon": "FaCar" },
+    { "label": "Electric Scooter", "icon": "FaBicycle" },
+    { "label": "Electric Motorcycle", "icon": "FaMotorcycle" },
+    { "label": "Electric Bus", "icon": "FaBus" },
+    { "label": "Electric Van", "icon": "FaShuttleVan" },
+    { "label": "UAM / eVTOL", "icon": "FaRocket" },
+    { "label": "E-mobility Apps", "icon": "FaMobileAlt" },
+    { "label": "Software Providers", "icon": "FaCode" },
+    { "label": "Mobility Service Providers", "icon": "FaMapMarkedAlt" },
+    { "label": "Industries & Logistics", "icon": "FaIndustry" },
+    { "label": "Energy & Infrastructure", "icon": "FaBolt" },
+    { "label": "Economic Zones", "icon": "FaGlobe" },
+    { "label": "Telecom / Wireless Carriers", "icon": "FaSignal" },
+    { "label": "Regulators and Government Agencies", "icon": "FaUniversity" },
+    { "label": "Electric Charging Stations and Equipment", "icon": "FaChargingStation" },
+    { "label": "Electric Vehicle Batteries Manufacturers", "icon": "FaBatteryFull" },
+    { "label": "Battery Materials / Mining Companies", "icon": "FaFlask" },
+    { "label": "Autonomous Vehicles / Technology", "icon": "FaRobot" }
+  ],
+"marquee": {
+  "electricMotorcycle": "Electric Motorcycle",
+  "visitors": "Visitors",
+  "speakers": "Speakers",
+  "sessions": "Sessions",
+  "countries": "Countries"
+},
+"footer": {
+  "expoDates": "5 - 9 August, 2025",
+  "expoLocation": "Damascus, Syria — 17:00 to 22:00 daily",
+  "contact": "Contact",
+  "contactValue": "info@motorexexpo.com",
+  "organizer": "Organizer",
+  "organizerValue": "Motorex Expo Team",
+  "exhibiting": "Exhibiting / Sponsorship",
+  "exhibitingValue": "info@motorexexpo.com",
+  "registerVisit": "Register to Visit",
+  "enquireExhibit": "Enquire to Exhibit",
+  "learnMore": "Learn More",
+  "quickLinks": "Quick Links",
+  "aboutExpo": "About the Expo",
+  "whyVisit": "Why Visit",
+  "exhibition": "Exhibition",
+  "sponsors": "Sponsors",
+  "media": "Media"
+},
+"common": {
+  "comingSoon": "Coming Soon"
+},
+"sections": {
+  "sponsorPartners": "Sponsor Partners",
+  "exhibitorsList": "Exhibitors List",
+  "mediaPartner": "Media Partner"
+}
+
+}

@@ -21,30 +21,7 @@ import {
   FaRobot,
 } from "react-icons/fa";
 import DownAnimation from "./DownAnimation";
-
-const sectors = [
-  { label: "Electric Car", icon: FaCar },
-  { label: "Electric Scooter", icon: FaBicycle },
-  { label: "Electric Motorcycle", icon: FaMotorcycle },
-  { label: "Electric Bus", icon: FaBus },
-  { label: "Electric Van", icon: FaShuttleVan },
-  { label: "UAM / eVTOL", icon: FaRocket },
-  { label: "E-mobility Apps", icon: FaMobileAlt },
-  { label: "Software Providers", icon: FaCode },
-  { label: "Mobility Service Providers", icon: FaMapMarkedAlt },
-  { label: "Industries & Logistics", icon: FaIndustry },
-  { label: "Energy & Infrastructure", icon: FaBolt },
-  { label: "Economic Zones", icon: FaGlobe },
-  { label: "Telecom / Wireless Carriers", icon: FaSignal },
-  { label: "Regulators and Government Agencies", icon: FaUniversity },
-  {
-    label: "Electric Charging Stations and Equipment",
-    icon: FaChargingStation,
-  },
-  { label: "Electric Vehicle Batteries Manufacturers", icon: FaBatteryFull },
-  { label: "Battery Materials / Mining Companies", icon: FaFlask },
-  { label: "Autonomous Vehicles / Technology", icon: FaRobot },
-];
+import { useTranslation } from "react-i18next";
 
 const headingVariants = {
   hidden: { opacity: 0, scale: 0.8 },
@@ -56,9 +33,11 @@ const headingVariants = {
 };
 
 export default function Sectors() {
+  const { t } = useTranslation();
   const controls = useAnimation();
   const ref = useRef(null);
   const inView = useInView(ref, { threshold: 0, once: false });
+
   useEffect(() => {
     if (inView) {
       controls.start("visible");
@@ -66,6 +45,9 @@ export default function Sectors() {
       controls.start("hidden");
     }
   }, [inView, controls]);
+
+  // Get translated sectors from i18n
+  const sectors = t('sectors', { returnObjects: true });
 
   return (
     <section className="relative py-20 text-white overflow-hidden">
@@ -87,12 +69,12 @@ export default function Sectors() {
           initial="hidden"
           animate={controls}
         >
-          Sectors
+          {t('sectorsTitle')}
         </motion.h2>
 
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {sectors.map((sector, index) => {
-            const Icon = sector.icon;
+            const Icon = getIconComponent(sector.icon);
             return (
               <div
                 key={index}
@@ -115,4 +97,29 @@ export default function Sectors() {
       <DownAnimation inView={inView} />
     </section>
   );
+}
+
+// Helper function to get icon component from string
+function getIconComponent(iconName) {
+  const icons = {
+    FaCar,
+    FaBicycle,
+    FaMotorcycle,
+    FaBus,
+    FaShuttleVan,
+    FaRocket,
+    FaMobileAlt,
+    FaCode,
+    FaMapMarkedAlt,
+    FaIndustry,
+    FaBolt,
+    FaGlobe,
+    FaSignal,
+    FaUniversity,
+    FaChargingStation,
+    FaBatteryFull,
+    FaFlask,
+    FaRobot
+  };
+  return icons[iconName] || FaCar;
 }

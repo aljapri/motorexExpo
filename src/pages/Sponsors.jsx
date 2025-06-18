@@ -1,8 +1,14 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import UpPages from "../components/UpPages";
+import UpAnimation from "../components/UpAnimation";
 const Sponsors = () => {
+  const ref = useRef(null);
+  const inView = useInView(ref, { triggerOnce: true, threshold: 0 });
+
   return (
     <div>
+      <UpPages title="sponsor"/>
       <div
         className="relative h-lvh  p-8  overflow-hidden"
         style={{
@@ -10,9 +16,11 @@ const Sponsors = () => {
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
+        ref={ref}
       >
+        <UpAnimation inView={inView} />
         {/* Dark overlay for better text contrast */}
-        <div className="absolute inset-0 bg-black/50 z-0"></div>
+        <div className="absolute inset-0 bg-black/50 -z-20"></div>
         {/* s */}
         <div className="absolute top-50 md:left-40 left-0 z-10  text-white max-w-3xl text-left pl-4">
           <motion.div
@@ -138,6 +146,7 @@ const Sponsors = () => {
               <h2 className="text-red-700">DIAMOND</h2>
               <h2 className="text-red-700">PLATINUM</h2>
               <h2 className="text-red-700">GOLD</h2>
+              <h2 className="text-red-700">SELVER</h2>
             </div>
           </div>
           <button className="bg-[#ed1c23]  mt-5 text-sm text-white  py-3 px-5 rounded-xl uppercase tracking-wide transition-all duration-300 transform hover:bg-[#ed1c2381] shadow-lg hover:shadow-xl">

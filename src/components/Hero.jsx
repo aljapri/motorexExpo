@@ -1,13 +1,17 @@
+import React from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 export default function Hero() {
+  const { t } = useTranslation();
+
   return (
     <section className="relative text-white w-full h-screen">
       {/* Background image with overlay */}
       <div className="absolute inset-0">
         <img
           src="bg.jpeg"
-          alt="Motorex Expo Background"
+          alt={t("hero.alt_bg") || "Motorex Expo Background"}
           className="w-full h-full object-cover"
         />
 
@@ -35,19 +39,19 @@ export default function Hero() {
           viewport={{ once: false, amount: 0.5 }}
         >
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Syria’s Biggest Automotive Comeback
+            {t("hero.title")}
           </h1>
           <p className="text-xl mb-8">
-            Join us at <strong>Motorex Expo 2025</strong> – the first international 
-            automotive exhibition in Damascus, connecting global brands with 
-            local passion and opportunity.
+            {t("hero.description_part1")}{" "}
+            <strong>{t("hero.expo_title")}</strong> –{" "}
+            {t("hero.description_part2")}
           </p>
           <div className="flex flex-row gap-4">
             <button className="bg-red-600 hover:bg-red-700 text-white px-2 sm:px-6 py-2 rounded-md font-medium transition duration-300">
-              REGISTER TO VISIT
+              {t("buttons.register_visit")}
             </button>
             <button className="bg-transparent hover:bg-white hover:text-gray-900 text-white border border-white px-2 sm:px-6 py-2 rounded-md font-medium text-xl transition duration-300">
-              Enquire to Exhibit
+              {t("buttons.enquire_exhibit")}
             </button>
           </div>
         </motion.div>
@@ -60,9 +64,9 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.2 }}
           viewport={{ once: false, amount: 0.5 }}
         >
-          <h1 className="text-4xl font-semibold mb-4">5 – 9 August, 2025</h1>
-          <h4 className="text-lg">Damascus International Fairgrounds</h4>
-          <h4 className="text-lg">Syria</h4>
+          <h1 className="text-4xl font-semibold mb-4">{t("hero.date")}</h1>
+          <h4 className="text-lg">{t("hero.venue")}</h4>
+          <h4 className="text-lg">{t("hero.location")}</h4>
         </motion.div>
       </div>
     </section>

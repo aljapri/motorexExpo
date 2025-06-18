@@ -19,7 +19,7 @@ export default function Home() {
       <About />
       <WhyAttend />
       <BookStand />
-      <OurSpeakers />
+      {/* <OurSpeakers /> */}
       <Sectors />
       <PartnersExhibitorsMedia />
     </>

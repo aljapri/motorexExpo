@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { motion, useAnimation, useInView } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 const titleVariants = {
   hidden: { opacity: 0, y: 20, scale: 0.95 },
@@ -11,7 +12,8 @@ const comingSoonVariants = {
   visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.8, ease: "easeOut", delay: 0.3 } },
 };
 
-const SectionComingSoon = ({ title }) => {
+const SectionComingSoon = ({ titleKey }) => {
+  const { t } = useTranslation();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false, margin: "-100px" });
   const controls = useAnimation();
@@ -33,16 +35,16 @@ const SectionComingSoon = ({ title }) => {
           initial="hidden"
           animate={controls}
         >
-          {title}
+          {t(titleKey)}
         </motion.h2>
-        <p
+        <motion.p
           className="text-gray-600 text-6xl italic"
           variants={comingSoonVariants}
           initial="hidden"
           animate={controls}
         >
-          Coming Soon
-        </p>
+          {t("common.comingSoon")}
+        </motion.p>
       </div>
     </section>
   );
@@ -51,9 +53,9 @@ const SectionComingSoon = ({ title }) => {
 export default function PartnersExhibitorsMedia() {
   return (
     <main className="bg-gray-50">
-      <SectionComingSoon title="Sponsor Partners" />
-      <SectionComingSoon title="Exhibitors List" />
-      <SectionComingSoon title="Media Partner" />
+      <SectionComingSoon titleKey="sections.sponsorPartners" />
+      <SectionComingSoon titleKey="sections.exhibitorsList" />
+      <SectionComingSoon titleKey="sections.mediaPartner" />
     </main>
   );
 }

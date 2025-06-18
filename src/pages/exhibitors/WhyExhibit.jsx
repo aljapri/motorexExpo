@@ -34,7 +34,7 @@ export default function WhyExhibit() {
 
   return (
     <div className="mb-20">
-      <UpPages title="About the Event" />
+      <UpPages title="why exhibitt" />
 
       <section
         className="bg-white relative flex flex-col px-2 sm:px-20 justify-center items-center"
