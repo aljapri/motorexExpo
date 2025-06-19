@@ -84,12 +84,13 @@ export default function Footer() {
             transition={{ duration: 0.6 }}
           >
             {CTA_BUTTONS.map((btn) => (
-              <button
+              <a
+              href="/contactUs"
                 key={btn.labelKey}
-                className={`${btn.style} text-white w-40 py-2 rounded-md font-medium transition duration-300`}
+                className={`${btn.style} text-white text-center w-40 py-2 rounded-md font-medium transition duration-300`}
               >
                 {t(btn.labelKey)}
-              </button>
+              </a>
             ))}
           </motion.div>
         </div>

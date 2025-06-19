@@ -27,7 +27,7 @@
     "media": "Media"
   },
   "buttons": {
-    "register_visit": "REGISTER TO VISIT",
+    "register_visit": "Become a Sponser",
     "enquire_exhibit": "Enquire to Exhibit"
   },
   "hero": {
@@ -156,7 +156,7 @@
   "organizerValue": "Dr. Mohamad bin Marwan Ourfahli Co For Businesses & Consulting",
   "exhibiting": "Exhibiting / Sponsorship",
   "exhibitingValue": "info@motorexexpo.com",
-  "registerVisit": "Register to Visit",
+  "registerVisit": "Become a Sponser",
   "enquireExhibit": "Enquire to Exhibit",
   "learnMore": "Contact Us",
   "quickLinks": "Quick Links",

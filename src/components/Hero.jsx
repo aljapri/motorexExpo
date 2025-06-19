@@ -47,12 +47,12 @@ export default function Hero() {
             {t("hero.description_part2")}
           </p>
           <div className="flex flex-row gap-4">
-            <button className="bg-red-600 hover:bg-red-700 text-white px-2 sm:px-6 py-2 rounded-md font-medium transition duration-300">
+            <a href="/contactUs" className="bg-red-600 hover:bg-red-700 text-white px-2 sm:px-6 py-2 rounded-md font-medium transition duration-300">
               {t("buttons.register_visit")}
-            </button>
-            <button className="bg-transparent hover:bg-white hover:text-gray-900 text-white border border-white px-2 sm:px-6 py-2 rounded-md font-medium text-xl transition duration-300">
+            </a>
+            <a href="/contactUs" className="bg-transparent hover:bg-white hover:text-gray-900 text-white border border-white px-2 sm:px-6 py-2 rounded-md font-medium text-xl transition duration-300">
               {t("buttons.enquire_exhibit")}
-            </button>
+            </a>
           </div>
         </motion.div>
 
