@@ -25,9 +25,9 @@ export const QUICK_LINKS = [
 ];
 
 export const SOCIAL_ICONS = [
-  { name: "facebook", href: "#" },
-  { name: "twitter", href: "#" },
-  { name: "instagram", href: "#" },
-  { name: "linkedin", href: "#" },
-  { name: "youtube", href: "#" },
+  { name: "facebook", href: "https://www.facebook.com/share/1AsxjhJTqM/" },
+  { name: "tiktok", href: "https://www.tiktok.com/@motorex.expo?_t=ZN-8xJncQFNykA&_r=1" },
+  { name: "instagram", href: "https://www.instagram.com/motorexexpo?igsh=MXc0bjBkanNodWZ2Zg==" },
+  { name: "snapchat", href: "https://www.snapchat.com/add/motorexexpo?share_id=dyb3Lzv-br4&locale=en-US" },
+  { name: "youtube", href: "https://youtube.com/@motorexexpo?feature=shared" },
 ];

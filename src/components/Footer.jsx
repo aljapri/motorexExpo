@@ -4,6 +4,9 @@ import {
   FaInstagram,
   FaLinkedinIn,
   FaYoutube,
+  FaTiktok,
+  FaSnapchat,
+  FaSnapchatGhost,
 } from "react-icons/fa";
 import { motion, useInView } from "framer-motion";
 import UpAnimation from "./UpAnimation";
@@ -20,9 +23,9 @@ import {
 
 const ICONS_MAP = {
   facebook: <FaFacebookF size={30} color="red" />,
-  twitter: <FaTwitter size={30} color="red" />,
+  tiktok: <FaTiktok size={30} color="red" />,
   instagram: <FaInstagram size={30} color="red" />,
-  linkedin: <FaLinkedinIn size={30} color="red" />,
+  snapchat: <FaSnapchatGhost size={30} color="red" />,
   youtube: <FaYoutube size={30} color="red" />,
 };
 

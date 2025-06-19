@@ -60,16 +60,14 @@ export default function StatsSection() {
           </div>
         </div>
 
-        {/* Heading */}
-        <div className="text-center mb-12">
+        {/* <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             {t("stats.title")}
           </h2>
           <div className="w-20 h-1 bg-white mx-auto"></div>
-        </div>
+        </div> */}
 
-        {/* Stats Grid */}
-        <div
+        {/* <div
           ref={ref}
           className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 divide-x divide-white border border-white rounded-xl"
           dir="ltr"
@@ -89,7 +87,7 @@ export default function StatsSection() {
               </h3>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   );

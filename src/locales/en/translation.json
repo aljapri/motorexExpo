@@ -120,11 +120,11 @@
   { "label": "Passenger Cars & SUVs", "icon": "FaCarSide" },
   { "label": "Electric Vehicles (EVs)", "icon": "FaBolt" },
   { "label": "Buses & Commercial Vehicles", "icon": "FaBusAlt" },
-  { "label": "Heavy Machinery & Construction Vehicles", "icon": "FaTruckMonster" },
+  { "label": "Heavy Machinery & Construction Vehicles", "icon": "GiBulldozer" },
   { "label": "Spare Parts & Maintenance Equipment", "icon": "FaTools" },
   { "label": "Electric Charging Stations and Equipment", "icon": "FaChargingStation" },
-  { "label": "Car and Vehicles Tires", "icon": "FaCircle" },
-  { "label": "Car Oil & Fluids", "icon": "FaOilCan" },
+  { "label": "Car and Vehicles Tires", "icon": "GiFlatTire" },
+  { "label": "Car Oil & Fluids", "icon": "IconMdiFuel" },
   { "label": "Distributors, Dealers & Importers", "icon": "FaStore" },
   { "label": "Motorcycles", "icon": "FaMotorcycle" },
   { "label": "Tuning cars", "icon": "FaCogs" },
@@ -146,18 +146,19 @@
     "finance": "Finance",
     "shipping": "Auto Shipping & Logistics"
   },
+
 "footer": {
-  "expoDates": "5 - 9 August, 2025",
-  "expoLocation": "Damascus, Syria — 17:00 to 22:00 daily",
+  "expoDates": "Damascus, Syria, 5 - 9 August, 17:00 to 22:00 daily, 2025",
+  "expoLocation":"Motorex Expo 2025 is the first and largest international automotive exhibition in Syria after years of industry pause",
   "contact": "Contact",
   "contactValue": "info@motorexexpo.com",
   "organizer": "Organizer",
-  "organizerValue": "Dr. Mohamad Ourfahli Org",
+  "organizerValue": "Dr. Mohamad bin Marwan Ourfahli Co For Businesses & Consulting",
   "exhibiting": "Exhibiting / Sponsorship",
   "exhibitingValue": "info@motorexexpo.com",
   "registerVisit": "Register to Visit",
   "enquireExhibit": "Enquire to Exhibit",
-  "learnMore": "Learn More",
+  "learnMore": "Contact Us",
   "quickLinks": "Quick Links",
   "aboutExpo": "About the Expo",
   "whyVisit": "Why Visit",
@@ -180,6 +181,34 @@
   "platinum":"Platinum",
   "gold":"Gold",
   "selver":"Selver"
-}
-
+},
+"contactUs": {
+    "title": "Contact Us",
+    "fullName": "Full Name",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "placeholderFullName": "Your full name",
+    "placeholderEmail": "you@example.com",
+    "placeholderMessage": "Write your message here...",
+    "selectSubject": "Select a topic",
+    "topics": {
+      "exhibit": "Exhibit",
+      "sponsoring": "Sponsoring",
+      "complaint": "Complaint",
+      "suggestion": "Suggestion",
+      "other": "Other"
+    },
+    "send": "Send Message",
+    "sending": "Sending...",
+    "success": "✅ Thank you! Your message has been sent.",
+    "error": "❌ Something went wrong. Please try again later.",
+    "required": {
+      "fullName": "Full name is required",
+      "email": "Email is required",
+      "emailPattern": "Invalid email address",
+      "subject": "Please select a subject",
+      "message": "Message is required"
+    }
+  }
 }

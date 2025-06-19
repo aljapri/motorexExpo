@@ -4,21 +4,21 @@ import {
   FaCarSide,
   FaBolt,
   FaBusAlt,
-  FaTruckMonster,
   FaTools,
   FaChargingStation,
   FaCircle,
   FaOilCan,
   FaStore,
-  FaMotorcycle,
   FaCogs,
   FaMobileAlt,
   FaUniversity,
   FaTruck,
   FaRobot,
-  FaCar
-} from "react-icons/fa";
+  FaCar,
 
+} from "react-icons/fa";
+import { GiBulldozer,GiFlatTire } from "react-icons/gi";
+import { IconMdiFuel } from "./IConMdiFuel";
 import DownAnimation from "./DownAnimation";
 import { useTranslation } from "react-i18next";
 
@@ -104,18 +104,19 @@ function getIconComponent(iconName) {
     FaCarSide,
     FaBolt,
     FaBusAlt,
-    FaTruckMonster,
+    GiBulldozer,
     FaTools,
     FaChargingStation,
     FaCircle,
-    FaOilCan,
+    IconMdiFuel,
     FaStore,
-    FaMotorcycle,
+    GiFlatTire,
     FaCogs,
     FaMobileAlt,
     FaUniversity,
     FaTruck,
-    FaRobot
+    FaRobot,
+    
   };
   return icons[iconName] || FaCar;
 }

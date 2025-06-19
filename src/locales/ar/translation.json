@@ -120,11 +120,11 @@
   { "label": "سيارات الركاب والسيارات الرياضية متعددة الاستخدامات", "icon": "FaCarSide" },
   { "label": "المركبات الكهربائية (EVs)", "icon": "FaBolt" },
   { "label": "الحافلات والمركبات التجارية", "icon": "FaBusAlt" },
-  { "label": "الآليات الثقيلة ومركبات البناء", "icon": "FaTruckMonster" },
+  { "label": "الآليات الثقيلة ومركبات البناء", "icon": "GiBulldozer" },
   { "label": "قطع الغيار ومعدات الصيانة", "icon": "FaTools" },
   { "label": "محطات ومعدات شحن السيارات الكهربائية", "icon": "FaChargingStation" },
-  { "label": "إطارات السيارات والمركبات", "icon": "FaCircle" },
-  { "label": "زيوت وسوائل السيارات", "icon": "FaOilCan" },
+  { "label": "إطارات السيارات والمركبات", "icon": "GiFlatTire" },
+  { "label": "زيوت وسوائل السيارات", "icon": "IconMdiFuel" },
   { "label": "الموزعين والوكلاء والمستوردين", "icon": "FaStore" },
   { "label": "الدراجات النارية", "icon": "FaMotorcycle" },
   { "label": "تعديل السيارات", "icon": "FaCogs" },
@@ -148,17 +148,17 @@
     "shipping": "الشحن والخدمات اللوجستية للسيارات"
   },
 "footer": {
-  "expoDates": "٥ - ٩ آب ٢٠٢٥",
-  "expoLocation": "دمشق، سوريا — يوميًا من الساعة 17:00 إلى 22:00",
+"expoDates": "دمشق، سوريا، من 5 إلى 9 آب، من الساعة 17:00 حتى 22:00 يوميًا، 2025",
+"expoLocation": "معرض موتوريكس 2025 هو أول وأكبر معرض دولي لصناعة السيارات في سوريا بعد سنوات من التوقف في هذا القطاع",
   "contact": "الاتصال",
   "contactValue": "info@motorexexpo.com",
   "organizer": "المنظم",
-  "organizerValue": "مؤسسة د.محمد بن مروان اورفه لي",
+  "organizerValue": "شركة د.محمد بن مروان اورفه لي للاستشارات والأعمال",
   "exhibiting": "العرض / الرعاية",
   "exhibitingValue": "info@motorexexpo.com",
   "registerVisit": "سجل زيارتك",
   "enquireExhibit": "استفسر عن العرض",
-  "learnMore": "اعرف المزيد",
+  "learnMore": "اتصل بنا",
   "quickLinks": "روابط سريعة",
   "aboutExpo": "حول المعرض",
   "whyVisit": "لماذا تزور",
@@ -181,6 +181,35 @@
   "platinum": "بلاتيني",
   "gold": "ذهبي",
   "selver": "فضي"
-}
+},
+"contactUs": {
+    "title": "تواصل معنا",
+    "fullName": "الاسم الكامل",
+    "email": "البريد الإلكتروني",
+    "subject": "الموضوع",
+    "message": "الرسالة",
+    "placeholderFullName": "اكتب اسمك الكامل",
+    "placeholderEmail": "you@example.com",
+    "placeholderMessage": "اكتب رسالتك هنا...",
+    "selectSubject": "اختر موضوعاً",
+    "topics": {
+      "exhibit": "عرض",
+      "sponsoring": "رعاية",
+      "complaint": "شكوى",
+      "suggestion": "اقتراح",
+      "other": "أخرى"
+    },
+    "send": "إرسال الرسالة",
+    "sending": "جاري الإرسال...",
+    "success": "✅ شكراً لك! تم إرسال رسالتك.",
+    "error": "❌ حدث خطأ، حاول لاحقاً.",
+    "required": {
+      "fullName": "الاسم الكامل مطلوب",
+      "email": "البريد الإلكتروني مطلوب",
+      "emailPattern": "عنوان البريد الإلكتروني غير صالح",
+      "subject": "يرجى اختيار الموضوع",
+      "message": "الرسالة مطلوبة"
+    }
+  }
 
 }

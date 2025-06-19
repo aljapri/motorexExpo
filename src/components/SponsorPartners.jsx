@@ -37,7 +37,10 @@ const SponsorPartners = () => {
   }, [isInView, controls]);
 
   return (
-    <section className="py-20 bg-red-800 text-white border-b border-gray-200" ref={ref}>
+    <section
+      className="py-20 bg-white text-red-800 border-b border-gray-200"
+      ref={ref}
+    >
       <div className="container mx-auto px-4 text-center max-w-4xl">
         <motion.h2
           className="text-4xl font-semibold mb-6"
@@ -55,7 +58,7 @@ const SponsorPartners = () => {
               initial="hidden"
               animate={controls}
             >
-              {t("sponsors.titleSonsor")}
+              {t("sponsors.strategic")}
             </motion.p>
             <motion.p
               className="text-3xl italic flex flex-row justify-center  font-semibold"
@@ -63,18 +66,18 @@ const SponsorPartners = () => {
               initial="hidden"
               animate={controls}
             >
-              <img src="/sponser-2.png" width={100} />
+              <img src="/sponser.jpeg" className="rounded-full" width={100} />
             </motion.p>
           </div>
           <div className=" flex flex-row justify-center gap-x-10">
-          <div className="space-y-5"> 
-          <motion.p
+            <div className="space-y-5">
+              <motion.p
                 className="text-md italic font-semibold"
                 variants={comingSoonVariants}
                 initial="hidden"
                 animate={controls}
               >
-                {t("sponsors.strategic")}
+                {t("sponsors.diamond")}
               </motion.p>
               <motion.p
                 className="text-3xl italic flex flex-row justify-center  font-semibold"
@@ -85,7 +88,7 @@ const SponsorPartners = () => {
                 {t("common.comingSoon")}
               </motion.p>
             </div>
-            <div className="space-y-5"> 
+            <div className="space-y-5">
               <motion.p
                 className="text-md italic font-semibold"
                 variants={comingSoonVariants}
@@ -103,7 +106,7 @@ const SponsorPartners = () => {
                 {t("common.comingSoon")}
               </motion.p>
             </div>
-            <div className="space-y-5"> 
+            <div className="space-y-5">
               <motion.p
                 className="text-md italic font-semibold"
                 variants={comingSoonVariants}
@@ -121,7 +124,6 @@ const SponsorPartners = () => {
                 {t("common.comingSoon")}
               </motion.p>
             </div>
-  
           </div>
           <div className="space-y-5">
             <motion.p
@@ -138,7 +140,7 @@ const SponsorPartners = () => {
               initial="hidden"
               animate={controls}
             >
-              <img src="/sponser-2.png" width={100} />
+              {t("common.comingSoon")}
             </motion.p>
           </div>
         </div>

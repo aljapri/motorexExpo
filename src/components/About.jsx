@@ -5,7 +5,9 @@ import { useTranslation } from "react-i18next";
 export default function About() {
   const { t, i18n } = useTranslation();
 
-  const images = ["about/one.jpg", "about/tow.jpg"];
+  const images1 = ["about/one.jpeg", "about/two.jpeg"];
+  const images2 = ["about/three.jpeg", "about/four.jpeg"];
+  const images3 = ["about/five.jpeg", "about/sex.jpeg"];
 
   const points = [
     t("about.points.passengerVehicles"),
@@ -98,7 +100,7 @@ export default function About() {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
           >
             <div className="grid grid-cols-2 gap-4">
-              {images.map((img, index) => (
+              {images1.map((img, index) => (
                 <div
                   key={index}
                   className={`overflow-hidden rounded-xl shadow-lg h-64 hover:scale-105 transition duration-300 ${
@@ -114,7 +116,7 @@ export default function About() {
               ))}
             </div>
             <div className="grid grid-cols-2 gap-4">
-              {images.map((img, index) => (
+              {images2.map((img, index) => (
                 <div
                   key={index}
                   className={`overflow-hidden rounded-xl shadow-lg h-64 hover:scale-105 transition duration-300 ${
@@ -129,6 +131,7 @@ export default function About() {
                 </div>
               ))}
             </div>
+            
           </motion.div>
         </div>
       </div>

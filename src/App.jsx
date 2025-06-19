@@ -14,6 +14,7 @@ import AboutEvent from "./pages/exhibitors/AboutEvent";
 import WhyExhibit from "./pages/exhibitors/WhyExhibit";
 import Registration from "./pages/exhibitors/Registration";
 import FloorPlan from "./pages/exhibitors/FloorPlan";
+import ContactUs from "./pages/ContactUs";
 // import ExhibitorZone from "./pages/exhibitors/FloorPlan";
 
 function App() {
@@ -27,6 +28,9 @@ function App() {
           <Route path="conference" element={<Conference />} />
           <Route path="sponsors" element={<Sponsors />} />
           <Route path="media" element={<Media />} />
+          
+          <Route path="contactUs" element={<ContactUs />} />
+
 
           {/* Exhibitors */}
           <Route path="exhibitors/about-event" element={<AboutEvent />} />
