@@ -53,9 +53,12 @@ export default function BookStand() {
 
           <p className="text-base md:text-lg font-bold">{t("bookStand.description")}</p>
 
-          <button className="mt-6 mb-12 px-8 py-3 bg-[#ff1100c7] text-white font-semibold rounded-full hover:bg-red-400 transition duration-300">
+          <a href="/contactUs?contactus=exhibit" className="mt-6 z-40 mb-20 px-8 py-3 bg-[#ff1100c7] text-white font-semibold rounded-full hover:bg-red-400 transition duration-300">
             {t("bookStand.button")}
-          </button>
+          </a>
+          <div className="mb-20">
+
+          </div>
         </motion.div>
       </div>
     </section>

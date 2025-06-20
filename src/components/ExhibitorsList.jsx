@@ -31,7 +31,7 @@ const ExhibitorList = () => {
   return (
     <section
       ref={ref}
-      className="py-20 border-b border-gray-200 w-full bg-white text-red-800"
+      className="py-20 border-b border-gray-200 w-full bg-gray-100 "
       dir={"ltr"}
     >
       <motion.h2

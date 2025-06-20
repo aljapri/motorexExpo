@@ -117,10 +117,10 @@ export default function Header() {
 
           <div className="flex items-center space-x-4">
             <div className="hidden sm:flex space-x-4">
-              <a href="/contactUs" className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-md font-medium">
+              <a href="/contactUs?contactus=sponsor" className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-md font-medium">
                 {t("buttons.register_visit")}
               </a>
-              <a href="/contactUs" className="border border-white text-white hover:bg-white hover:text-red-700 px-4 py-2 rounded-md font-medium">
+              <a href="/contactUs?contactus=exhibit" className="border border-white text-white hover:bg-white hover:text-red-700 px-4 py-2 rounded-md font-medium">
                 {t("buttons.enquire_exhibit")}
               </a>
             </div>

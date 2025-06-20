@@ -1,4 +1,7 @@
+import { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import i18n from "./i18n"; // Make sure this path is correct
+
 import Layout from "./Layout";
 
 // Pages
@@ -8,16 +11,24 @@ import Visitor from "./pages/Visitor";
 import Conference from "./pages/Conference";
 import Sponsors from "./pages/Sponsors";
 import Media from "./pages/Media";
+import ContactUs from "./pages/ContactUs";
+import Sponsoring from "./pages/Sponsoring";
 
 // Exhibitor Subpages
 import AboutEvent from "./pages/exhibitors/AboutEvent";
 import WhyExhibit from "./pages/exhibitors/WhyExhibit";
 import Registration from "./pages/exhibitors/Registration";
 import FloorPlan from "./pages/exhibitors/FloorPlan";
-import ContactUs from "./pages/ContactUs";
 // import ExhibitorZone from "./pages/exhibitors/FloorPlan";
 
 function App() {
+  useEffect(() => {
+    if (!localStorage.getItem("i18nextLng")) {
+      i18n.changeLanguage("en");
+      localStorage.setItem("i18nextLng", "en");
+    }
+  }, []);
+
   return (
     <Router>
       <Routes>
@@ -28,9 +39,8 @@ function App() {
           <Route path="conference" element={<Conference />} />
           <Route path="sponsors" element={<Sponsors />} />
           <Route path="media" element={<Media />} />
-          
           <Route path="contactUs" element={<ContactUs />} />
-
+          <Route path="sponsoring" element={<Sponsoring />} />
 
           {/* Exhibitors */}
           <Route path="exhibitors/about-event" element={<AboutEvent />} />

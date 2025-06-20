@@ -38,7 +38,7 @@ const SponsorPartners = () => {
 
   return (
     <section
-      className="py-20 bg-white text-red-800 border-b border-gray-200"
+      className="py-20 bg-white  border-b border-gray-200"
       ref={ref}
     >
       <div className="container mx-auto px-4 text-center max-w-4xl">
@@ -53,7 +53,7 @@ const SponsorPartners = () => {
         <div className="flex flex-col space-y-10">
           <div className="space-y-5">
             <motion.p
-              className="text-md italic font-semibold"
+              className="text-2xl italic font-semibold"
               variants={comingSoonVariants}
               initial="hidden"
               animate={controls}
@@ -66,14 +66,17 @@ const SponsorPartners = () => {
               initial="hidden"
               animate={controls}
             >
+              <a href="https://77auto.sy/" >
               <img src="/sponser.jpeg" className="rounded-full" width={100} />
+
+              </a>
             </motion.p>
           </div>
           <div className=" flex flex-row justify-center gap-x-10">
             <div className="space-y-5">
               <motion.p
-                className="text-md italic font-semibold"
-                variants={comingSoonVariants}
+              className="text-2xl italic font-semibold"
+              variants={comingSoonVariants}
                 initial="hidden"
                 animate={controls}
               >
@@ -90,8 +93,8 @@ const SponsorPartners = () => {
             </div>
             <div className="space-y-5">
               <motion.p
-                className="text-md italic font-semibold"
-                variants={comingSoonVariants}
+              className="text-2xl italic font-semibold"
+              variants={comingSoonVariants}
                 initial="hidden"
                 animate={controls}
               >
@@ -108,12 +111,12 @@ const SponsorPartners = () => {
             </div>
             <div className="space-y-5">
               <motion.p
-                className="text-md italic font-semibold"
-                variants={comingSoonVariants}
+              className="text-2xl italic font-semibold"
+              variants={comingSoonVariants}
                 initial="hidden"
                 animate={controls}
               >
-                {t("sponsors.selver")}
+                {t("sponsors.gold")}
               </motion.p>
               <motion.p
                 className="text-3xl italic flex flex-row justify-center  font-semibold"
@@ -127,15 +130,15 @@ const SponsorPartners = () => {
           </div>
           <div className="space-y-5">
             <motion.p
-              className="text-md italic font-semibold"
+              className="text-2xl italic font-semibold"
               variants={comingSoonVariants}
               initial="hidden"
               animate={controls}
             >
-              {t("sponsors.gold")}
+              {t("sponsors.selver")}
             </motion.p>
             <motion.p
-              className="text-3xl italic flex flex-row justify-center text-red-800 font-semibold"
+              className="text-3xl italic flex flex-row justify-center  font-semibold"
               variants={comingSoonVariants}
               initial="hidden"
               animate={controls}

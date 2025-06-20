@@ -7,7 +7,6 @@ import {
   FaTools,
   FaChargingStation,
   FaCircle,
-  FaOilCan,
   FaStore,
   FaCogs,
   FaMobileAlt,
@@ -15,12 +14,14 @@ import {
   FaTruck,
   FaRobot,
   FaCar,
-
 } from "react-icons/fa";
-import { GiBulldozer,GiFlatTire } from "react-icons/gi";
-import { IconMdiFuel } from "./IConMdiFuel";
+import { GiBulldozer } from "react-icons/gi";
 import DownAnimation from "./DownAnimation";
 import { useTranslation } from "react-i18next";
+
+// Import your images (make sure these files exist in your project)
+import tireIcon from '../assets/icons/tire.png';
+import oilIcon from '../assets/icons/oil.png';
 
 const headingVariants = {
   hidden: { opacity: 0, scale: 0.8 },
@@ -30,6 +31,18 @@ const headingVariants = {
     transition: { duration: 0.8, ease: "easeOut" },
   },
 };
+
+// Enhanced ImageIcon component
+const ImageIcon = ({ src, size = 24, alt = "", className = "", ...props }) => (
+  <img 
+    src={src} 
+    alt={alt}
+    width={size}
+    height={size}
+    className={`${className} object-contain block`}
+    {...props}
+  />
+);
 
 export default function Sectors() {
   const { t } = useTranslation();
@@ -83,7 +96,13 @@ export default function Sectors() {
                     "polygon(50% 0%, 100% 0, 100% 35%, 100% 78%, 84% 100%, 50% 100%, 18% 100%, 0 100%, 1% 14%, 34% 0)",
                 }}
               >
-                <Icon size={28} className="mb-2" />
+                {sector.icon === 'ImageTire' ? (
+                  <ImageIcon src={tireIcon} size={35} className="mb-2" alt="Tire icon" />
+                ) : sector.icon === 'ImageOil' ? (
+                  <ImageIcon src={oilIcon} size={20} className="mb-2" alt="Oil icon" />
+                ) : (
+                  <Icon size={28} className="mb-2" />
+                )}
                 <span className="leading-snug text-center px-2">
                   {sector.label}
                 </span>
@@ -98,7 +117,7 @@ export default function Sectors() {
   );
 }
 
-// Helper function to get icon component from string
+// Updated helper function
 function getIconComponent(iconName) {
   const icons = {
     FaCarSide,
@@ -108,15 +127,12 @@ function getIconComponent(iconName) {
     FaTools,
     FaChargingStation,
     FaCircle,
-    IconMdiFuel,
     FaStore,
-    GiFlatTire,
     FaCogs,
     FaMobileAlt,
     FaUniversity,
     FaTruck,
     FaRobot,
-    
   };
   return icons[iconName] || FaCar;
 }

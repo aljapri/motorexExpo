@@ -1,3 +1,4 @@
+
 export const EXPO_INFO = {
   logo: "/logo.png",
   datesKey: "footer.expoDates",
@@ -11,9 +12,9 @@ export const CONTACT_INFO = [
 ];
 
 export const CTA_BUTTONS = [
-  { labelKey: "footer.registerVisit", style: "bg-red-600 hover:bg-red-700" },
-  { labelKey: "footer.enquireExhibit", style: "bg-red-400" },
-  { labelKey: "footer.learnMore", style: "bg-red-600 hover:bg-red-700" },
+  { labelKey: "footer.registerVisit",href:"/contactUs?contactus=sponsor"  ,style: "bg-red-600 hover:bg-red-700" },
+  { labelKey: "footer.enquireExhibit", href:"/contactUs?contactus=exhibit"  ,style: "bg-red-400" },
+  { labelKey: "footer.learnMore", href:"/contactUs",  style: "bg-red-600 hover:bg-red-700" },
 ];
 
 export const QUICK_LINKS = [

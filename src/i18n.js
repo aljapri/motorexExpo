@@ -15,12 +15,13 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    fallbackLng: 'en',
+    fallbackLng: 'en', // fallback if no language is detected
     interpolation: { escapeValue: false },
     detection: {
-      order: ['localStorage', 'navigator', 'htmlTag'],
+      order: ['localStorage'], // Only use localStorage
       caches: ['localStorage'],
     },
+    // lng: 'en', // Force default language to English
   });
 
 export default i18n;

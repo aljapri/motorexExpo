@@ -28,7 +28,7 @@
   },
   "buttons": {
     "register_visit": "كن راعياً",
-    "enquire_exhibit": "استفسر عن العرض"
+    "enquire_exhibit": "احجز جناحك"
   },
   "hero": {
     "alt_bg": "خلفية معرض موتوريكس",
@@ -80,7 +80,7 @@
   },
   "whyAttend": {
     "title": "لماذا تحضر؟",
-    "subtitle": "انضم إلى أهم معرض للسيارات في الشرق الأوسط وكن جزءًا من ثورة التنقل",
+    "subtitle": "انضم إلى أهم معرض للسيارات في  سوريا وكن جزءًا من ثورة التنقل",
     "reasons": [
       {
         "title": "استكشف المركبات",
@@ -109,11 +109,11 @@
     ]
   },
   "bookStand": {
-    "title": "احجز منصتك الآن",
+    "title": "احجز جناحك الآن",
     "expoTitle": "معرض موتوريكس 2025 – دمشق",
     "dateInfo": "انضموا إلينا في دمشق من <strong>5 إلى 9 آب 2025</strong>، من الساعة 5:00 مساءً حتى 10:00 مساءً يوميًا.",
     "description": "معرض موتوريكس 2025 هو أكبر وأول معرض سيارات دولي في سوريا منذ سنوات — يقدم منصة قوية للابتكار في مجال السيارات، وبناء الشبكات التجارية، والاحتفال الثقافي. احجز منصتك وضع علامتك التجارية في قلب هذا الحدث التاريخي.",
-    "button": "احجز منصتك"
+    "button": "احجز جناحك"
   },
   "sectorsTitle": "القطاعات",
 "sectors": [
@@ -123,8 +123,8 @@
   { "label": "الآليات الثقيلة ومركبات البناء", "icon": "GiBulldozer" },
   { "label": "قطع الغيار ومعدات الصيانة", "icon": "FaTools" },
   { "label": "محطات ومعدات شحن السيارات الكهربائية", "icon": "FaChargingStation" },
-  { "label": "إطارات السيارات والمركبات", "icon": "GiFlatTire" },
-  { "label": "زيوت وسوائل السيارات", "icon": "IconMdiFuel" },
+  { "label": "إطارات السيارات والمركبات", "icon": "ImageTire" },
+  { "label": "زيوت وسوائل السيارات", "icon": "ImageOil" },
   { "label": "الموزعين والوكلاء والمستوردين", "icon": "FaStore" },
   { "label": "الدراجات النارية", "icon": "FaMotorcycle" },
   { "label": "تعديل السيارات", "icon": "FaCogs" },
@@ -135,29 +135,29 @@
 ]
 ,
   "marquee": {
-    "cars": "السيارات",
-    "bus": "الحافلات",
-    "heavyVehicles": "المركبات الثقيلة",
-    "oilsFluids": "الزيوت والسوائل",
-    "spareParts": "قطع الغيار",
-    "electricCars": "السيارات الكهربائية"
+    "cars": "- السيارات",
+    "bus": "- الحافلات",
+    "heavyVehicles": "- المركبات الثقيلة",
+    "oilsFluids": "- الزيوت والسوائل",
+    "spareParts": "- قطع الغيار",
+    "electricCars": "- السيارات الكهربائية"
   },
   "marquee2": {
-    "dealers": "الوكلاء",
-    "finance": "التمويل",
-    "shipping": "الشحن والخدمات اللوجستية للسيارات"
+    "dealers": "- الوكلاء",
+    "finance": "- التمويل",
+    "shipping": "- الشحن والخدمات اللوجستية للسيارات"
   },
 "footer": {
 "expoDates": "دمشق، سوريا، من 5 إلى 9 آب، من الساعة 17:00 حتى 22:00 يوميًا، 2025",
 "expoLocation": "معرض موتوريكس 2025 هو أول وأكبر معرض دولي لصناعة السيارات في سوريا بعد سنوات من التوقف في هذا القطاع",
-  "contact": "الاتصال",
+  "contact": "تواصل معنا",
   "contactValue": "info@motorexexpo.com",
   "organizer": "المنظم",
   "organizerValue": "شركة د.محمد بن مروان اورفه لي للاستشارات والأعمال",
   "exhibiting": "العرض / الرعاية",
   "exhibitingValue": "info@motorexexpo.com",
   "registerVisit": "كن راعياً",
-  "enquireExhibit": "استفسر عن العرض",
+  "enquireExhibit": "احجز جناحك",
   "learnMore": "اتصل بنا",
   "quickLinks": "روابط سريعة",
   "aboutExpo": "حول المعرض",
@@ -188,6 +188,10 @@
     "email": "البريد الإلكتروني",
     "subject": "الموضوع",
     "message": "الرسالة",
+    "titleTopic": {
+      "sponsoring": "كن راعيا",
+      "exhibit": "احجز جناحك"
+    },
     "placeholderFullName": "اكتب اسمك الكامل",
     "placeholderEmail": "you@example.com",
     "placeholderMessage": "اكتب رسالتك هنا...",

@@ -27,7 +27,7 @@ const comingSoonVariants = {
   }, [isInView, controls]);
 
   return (
-    <section className="py-20 bg-white text-red-800 border-b border-gray-200" ref={ref}>
+    <section className="py-20 bg-white  border-b border-gray-200" ref={ref}>
       <div className="container mx-auto px-4 text-center max-w-4xl">
         <motion.h2
           className="text-4xl font-semibold mb-6"

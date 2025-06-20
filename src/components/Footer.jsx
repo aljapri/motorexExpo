@@ -85,7 +85,7 @@ export default function Footer() {
           >
             {CTA_BUTTONS.map((btn) => (
               <a
-              href="/contactUs"
+              href={btn.href}
                 key={btn.labelKey}
                 className={`${btn.style} text-white text-center w-40 py-2 rounded-md font-medium transition duration-300`}
               >

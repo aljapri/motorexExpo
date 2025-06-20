@@ -43,13 +43,17 @@ export default function Marquees() {
       {/* Stripe 1 - White background */}
       <div className="absolute top-20 left-0 w-full">
         <div className="w-[200%] -ml-[50%] transform rotate-[-5deg] text-red-900 bg-white py-5">
-          <Marquee speed={30} gradient={false} direction="left" loop={0} >
+          <Marquee speed={30} gradient={false} direction="left" loop={0}>
             <div className="text-3xl text-red-900 font-semibold px-4">
               {Array(10)
                 .fill(stats)
                 .flat()
-                .map((item) => t(item.labelKey))
-                .join(" - ")}
+                .map((item, index) => (
+                  <span key={index} className="mx-2 whitespace-nowrap">
+                    {/* {index > 0 && <span className="px-2">-</span>} */}
+                    {t(item.labelKey)}
+                  </span>
+                ))}
             </div>
           </Marquee>
         </div>
@@ -59,12 +63,19 @@ export default function Marquees() {
       <div className="absolute top-34 left-0 w-full ">
         <div className="w-[200%] -ml-[50%] transform rotate-[5deg] bg-red-500 py-5">
           <Marquee speed={50} gradient={false} direction="right" loop={0}>
-            <div className="text-3xl text-white font-semibold px-4">
+            <div className="text-3xl text-white font-semibold px-4 flex items-center flex-wrap">
               {Array(10)
                 .fill(stats2)
                 .flat()
-                .map((item) => t(item.labelKey))
-                .join(" - ")}
+                .map((item, index) => (
+                  <span
+                    key={index}
+                    className="mx-1 whitespace-nowrap flex items-center"
+                  >
+                    {/* {index > 0 && <span className="px-2">-</span>} */}
+                    {t(item.labelKey)}
+                  </span>
+                ))}
             </div>
           </Marquee>
         </div>

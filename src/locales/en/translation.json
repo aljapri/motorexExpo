@@ -80,7 +80,7 @@
   },
   "whyAttend": {
     "title": "Why Attend",
-    "subtitle": "Join the premier automotive exhibition in the Middle East and be part of the mobility revolution",
+    "subtitle": "Join the premier automotive exhibition in the Syria and be part of the mobility revolution",
     "reasons": [
       {
         "title": "Explore Vehicles",
@@ -121,36 +121,36 @@
   { "label": "Electric Vehicles (EVs)", "icon": "FaBolt" },
   { "label": "Buses & Commercial Vehicles", "icon": "FaBusAlt" },
   { "label": "Heavy Machinery & Construction Vehicles", "icon": "GiBulldozer" },
-  { "label": "Spare Parts & Maintenance Equipment", "icon": "FaTools" },
+  { "label": "Spare Parts & Maintenance Equipment", "icon": "FaCogs" },
   { "label": "Electric Charging Stations and Equipment", "icon": "FaChargingStation" },
-  { "label": "Car and Vehicles Tires", "icon": "GiFlatTire" },
-  { "label": "Car Oil & Fluids", "icon": "IconMdiFuel" },
+  { "label": "Car and Vehicles Tires", "icon": "ImageTire" },
+  { "label": "Car Oil & Fluids", "icon": "ImageOil" },
   { "label": "Distributors, Dealers & Importers", "icon": "FaStore" },
   { "label": "Motorcycles", "icon": "FaMotorcycle" },
-  { "label": "Tuning cars", "icon": "FaCogs" },
+  { "label": "Tuning cars", "icon": "FaTools" },
   { "label": "Mobility apps", "icon": "FaMobileAlt" },
   { "label": "Bank Services & Financial", "icon": "FaUniversity" },
   { "label": "Auto Shipping & Logistics", "icon": "FaTruck" },
   { "label": "Autonomous Vehicles / Technology", "icon": "FaRobot" }
 ],
 "marquee": {
-    "cars": "Cars",
-    "bus": "Bus",
-    "heavyVehicles": "Heavy Vehicles",
-    "oilsFluids": "Oils & Fluids",
-    "spareParts": "Spare Parts",
-    "electricCars": "Electric Cars"
+    "cars": "Cars -",
+    "bus": "Bus -",
+    "heavyVehicles": "Heavy Vehicles -",
+    "oilsFluids": "Oils & Fluids -",
+    "spareParts": "Spare Parts -",
+    "electricCars": "Electric Cars -"
   },
   "marquee2": {
-    "dealers": "Dealers",
-    "finance": "Finance",
-    "shipping": "Auto Shipping & Logistics"
+    "dealers": "Dealers -",
+    "finance": "Finance -",
+    "shipping": "Auto Shipping & Logistics -"
   },
 
 "footer": {
   "expoDates": "Damascus, Syria, 5 - 9 August, 17:00 to 22:00 daily, 2025",
   "expoLocation":"Motorex Expo 2025 is the first and largest international automotive exhibition in Syria after years of industry pause",
-  "contact": "Contact",
+  "contact": "Contact Us",
   "contactValue": "info@motorexexpo.com",
   "organizer": "Organizer",
   "organizerValue": "Dr. Mohamad bin Marwan Ourfahli Co For Businesses & Consulting",
@@ -180,11 +180,15 @@
   "diamond":"Diamond",
   "platinum":"Platinum",
   "gold":"Gold",
-  "selver":"Selver"
+  "selver":"Silver"
 },
 "contactUs": {
     "title": "Contact Us",
     "fullName": "Full Name",
+    "titleTopic": {
+    "sponsoring": "Become a Sponser",
+    "exhibit": "Enquire to Exhibit"
+  },
     "email": "Email",
     "subject": "Subject",
     "message": "Message",
@@ -208,6 +212,26 @@
       "email": "Email is required",
       "emailPattern": "Invalid email address",
       "subject": "Please select a subject",
+      "message": "Message is required"
+    }
+  },
+  "sponsoring": {
+    "title": "Sponsoring",
+    "fullName": "Full Name",
+    "email": "Email",
+    "subject": "Subject Sponsoring ",
+    "message": "Message",
+    "placeholderFullName": "Your full name",
+    "placeholderEmail": "you@example.com",
+    "placeholderMessage": "Write your message here...",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "success": "✅ Thank you! Your message has been sent.",
+    "error": "❌ Something went wrong. Please try again later.",
+    "required": {
+      "fullName": "Full name is required",
+      "email": "Email is required",
+      "emailPattern": "Invalid email address",
       "message": "Message is required"
     }
   }

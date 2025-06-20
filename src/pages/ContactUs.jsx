@@ -5,12 +5,15 @@ import { useInView } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import UpPages from "../components/UpPages";
 import UpAnimation from "../components/UpAnimation";
+import { useLocation } from "react-router-dom";
 
 export default function ContactUs() {
   const { t } = useTranslation();
   const ref = useRef(null);
   const inView = useInView(ref, { triggerOnce: true, threshold: 0.2 });
-
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search);
+  const contactusParam = queryParams.get("contactus");
   const {
     register,
     handleSubmit,
@@ -29,7 +32,7 @@ export default function ContactUs() {
       // Send to admin
       await emailjs.send(
         "service_3dhdkfa",
-        "template_jbkk1xc",
+        "template_yp6t3yj",
         {
           name: data.name,
           email: data.email,
@@ -42,7 +45,7 @@ export default function ContactUs() {
       // Send confirmation to user
       await emailjs.send(
         "service_3dhdkfa",
-        "template_jbkk1xc",
+        "template_yp6t3yj",
         {
           name: data.name,
           email: data.email,
@@ -63,7 +66,15 @@ export default function ContactUs() {
 
   return (
     <div>
-      <UpPages title={t("contactUs.title")} />
+      <UpPages
+        title={
+          contactusParam === "sponsor"
+            ? t("contactUs.titleTopic.sponsoring")
+            : contactusParam === "exhibit"
+            ? t("contactUs.titleTopic.exhibit")
+            : t("contactUs.title")
+        }
+      />
 
       <div className="relative w-full" ref={ref}>
         <UpAnimation inView={inView} />
@@ -94,7 +105,9 @@ export default function ContactUs() {
                 placeholder={t("contactUs.placeholderFullName")}
               />
               {errors.name && (
-                <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>
+                <p className="text-red-500 text-sm mt-1">
+                  {errors.name.message}
+                </p>
               )}
             </div>
 
@@ -115,7 +128,9 @@ export default function ContactUs() {
                 placeholder={t("contactUs.placeholderEmail")}
               />
               {errors.email && (
-                <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
+                <p className="text-red-500 text-sm mt-1">
+                  {errors.email.message}
+                </p>
               )}
             </div>
 
@@ -129,15 +144,37 @@ export default function ContactUs() {
                 })}
                 className="w-full border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
               >
-                <option value="">{t("contactUs.selectSubject")}</option>
-                <option value="Exhibit">{t("contactUs.topics.exhibit")}</option>
-                <option value="Sponsoring">{t("contactUs.topics.sponsoring")}</option>
-                <option value="Complaint">{t("contactUs.topics.complaint")}</option>
-                <option value="Suggestion">{t("contactUs.topics.suggestion")}</option>
-                <option value="Other">{t("contactUs.topics.other")}</option>
+                {contactusParam != "sponsor" && contactusParam != "exhibit" && (
+                  <option value="">{t("contactUs.selectSubject")}</option>
+                )}
+
+                {(!contactusParam || contactusParam === "exhibit") && (
+                  <option value="Exhibit">
+                    {t("contactUs.topics.exhibit")}
+                  </option>
+                )}
+                {(!contactusParam || contactusParam === "sponsor") && (
+                  <option value="Sponsoring">
+                    {t("contactUs.topics.sponsoring")}
+                  </option>
+                )}
+                {!contactusParam && (
+                  <>
+                    <option value="Complaint">
+                      {t("contactUs.topics.complaint")}
+                    </option>
+                    <option value="Suggestion">
+                      {t("contactUs.topics.suggestion")}
+                    </option>
+                    <option value="Other">{t("contactUs.topics.other")}</option>
+                  </>
+                )}
               </select>
+
               {errors.subject && (
-                <p className="text-red-500 text-sm mt-1">{errors.subject.message}</p>
+                <p className="text-red-500 text-sm mt-1">
+                  {errors.subject.message}
+                </p>
               )}
             </div>
 
@@ -154,7 +191,9 @@ export default function ContactUs() {
                 placeholder={t("contactUs.placeholderMessage")}
               ></textarea>
               {errors.message && (
-                <p className="text-red-500 text-sm mt-1">{errors.message.message}</p>
+                <p className="text-red-500 text-sm mt-1">
+                  {errors.message.message}
+                </p>
               )}
             </div>
 
